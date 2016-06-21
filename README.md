@@ -1,2 +1,2 @@
-# visualizador
+# Visualizador
 Visualizador de Documentos 
