@@ -1,0 +1,28 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org/">
+
+	<wicket:enclosure>
+		<div class="alert alert-danger alert-dismissable">
+	        <h4><i class="icon fa fa-ban"></i><wicket:message key="label.atencao">Atenção</wicket:message>!</h4>
+	        <div wicket:id="feedbackError"></div>
+		</div>
+	</wicket:enclosure>
+	<wicket:enclosure>
+        <div class="alert alert-info alert-dismissable">
+            <h4><i class="icon fa fa-info"></i><wicket:message key="label.atencao">Atenção</wicket:message>!</h4>
+			<div wicket:id="feedbackInfo"></div>
+		</div>
+	</wicket:enclosure>
+    <wicket:enclosure>
+        <div class="alert alert-warning alert-dismissable">
+            <h4><i class="icon fa fa-warning"></i><wicket:message key="label.atencao">Atenção</wicket:message>!</h4>
+            <div wicket:id="feedbackWarning"></div>
+        </div>
+    </wicket:enclosure>
+	<wicket:enclosure>
+    	<div class="alert alert-success alert-dismissable">
+            <h4><i class="icon fa fa-check"></i><wicket:message key="label.sucesso">Sucesso</wicket:message>!</h4>
+			<div wicket:id="feedbackSuccess"></div>
+		</div>
+	</wicket:enclosure>
+
+</wicket:panel>

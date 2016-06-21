@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATENCAO: Ao criar um pacote publicavel para o WildFly ou outro servidor corporativo, 
+    uma versão processada deste arquivo e incluida no WAR. Os trechos 
+    comentados que contenham a string $deployment$ sao descomentados. 
+    Portanto, nao retire esses trechos. 
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+    version="3.1">
+
+    <display-name>Visualizador</display-name>
+    <description>Visualizador De Documentos DataEasy</description>
+
+</web-app>

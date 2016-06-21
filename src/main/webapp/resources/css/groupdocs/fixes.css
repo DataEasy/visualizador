@@ -1,0 +1,12 @@
+.head_tool_dropdown_export{width: 210px;}
+input[type="file"].import-input{width: 33px;font-size: 18px !important;}
+.grpdx input, .grpdx textarea, .grpdx select, .grpdx .uneditable-input{width: 31px !important;}
+.file-input{font-size:21px !important;}
+.input_search, .grpdx .input_search{width: 65px !important;}
+.loading_overlay_message { position: absolute; top: 30%; left: 50%; margin: -50px 0 0 -105px; width: 230px; }
+.grpdx { font-size: 16px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+.grpdx .modal.fade { top: -300px; }
+.groupdocs_viewer_wrapper { background-color: #777d84; height: 100%; }
+.grpdx .ta_tp_font { margin-left: -6px; width: 75px; font-family: "PT Sans", Helvetica, Arial, sans-serif; font-size: 14px; }
+.grpdx .tool_field_tooltip { width: 200px; }
+.new_head_tools_btn:after { max-width: 250px; }

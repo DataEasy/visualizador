@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<deployment>
+    	<dependencies>
+    		<system export="true">
+				<paths>
+	                <path name="sun/security/rsa"/>
+	                <path name="sun/security/provider"/>
+	                <path name="sun/security/provider/certpath"/>
+	                <path name="sun/security/pkcs"/>
+	                <path name="sun/security/pkcs10"/>
+	                <path name="sun/security/pkcs11"/>
+	                <path name="sun/security/pkcs12"/>
+	                <path name="sun/security/jca"/>
+	                <path name="sun/security/x509"/>
+	                <path name="sun/security/smartcardio"/>
+	                <path name="sun/security/jgss"/>
+	                <path name="sun/security/jgss/krb5"/>
+	                <path name="sun/security/jgss/spnego"/>
+	                <path name="sun/security/ec"/>
+	                <path name="sun/security/mscapi"/>
+	                <path name="sun/security/ssl"/>
+	                <path name="com/sun/security/cert/internal"/>
+	                <path name="com/sun/security/sasl"/>
+	                <path name="com/sun/security/sasl/digest"/>
+	                <path name="com/sun/security/sasl/gsskerb"/>
+	                <path name="com/sun/net/ssl"/>
+	                <path name="com/sun/net/ssl/internal/ssl"/>
+	                <path name="com/sun/net/ssl/internal/pkcs12"/>
+	                <path name="com/sun/crypto/provider"/>
+	                <path name="com/sun/tools/javac"/>
+	                <path name="com/sun/tools/javac/processing"/>
+	                <path name="com/sun/imageio/plugins/bmp"/>
+	                <path name="com/sun/imageio/plugins/common"/>
+	                <path name="com/sun/imageio/plugins/gif"/>
+	                <path name="com/sun/imageio/plugins/jpeg"/>
+	                <path name="com/sun/imageio/plugins/png"/>
+	                <path name="com/sun/imageio/plugins/wbmp"/>
+	                <path name="com/sun/xml/internal/bind/marshaller"/>
+	                <path name="com/sun/xml/internal/messaging/saaj/util"/>
+	                <path name="com/sun/org/apache/xerces/internal/impl/dv/util"/>
+	                <path name="javax/annotation/processing"/>
+	                <path name="javax/security/auth/x500"/>
+	                <path name="javax/security/cert"/>
+	                <path name="javax/crypto"/>
+	                <path name="javax/crypto/interfaces"/>
+	                <path name="javax/net"/>
+	                <path name="javax/net/ssl"/>
+	                <path name="java/security"/>
+	                <path name="java/security/interfaces"/>
+	                <path name="sun/net/www/protocol/https"/>
+	                <path name="org/jcp/xml/dsig/internal/dom"/>
+	                <path name="com/sun/media/imageio/plugins/bmp"/>
+                    <path name="com/sun/media/imageio/plugins/jpeg2000"/>
+                    <path name="com/sun/media/imageio/plugins/pnm"/>
+                    <path name="com/sun/media/imageio/plugins/tiff"/>
+                    <path name="com/sun/media/imageio/stream"/>
+                    <path name="com/sun/media/imageioimpl/common"/>
+                    <path name="com/sun/media/imageioimpl/plugins/bmp"/>
+                    <path name="com/sun/media/imageioimpl/plugins/clib"/>
+                    <path name="com/sun/media/imageioimpl/plugins/gif"/>
+                    <path name="com/sun/media/imageioimpl/plugins/jpeg"/>
+                    <path name="com/sun/media/imageioimpl/plugins/jpeg2000"/>
+                    <path name="com/sun/media/imageioimpl/plugins/png"/>
+                    <path name="com/sun/media/imageioimpl/plugins/pnm"/>
+                    <path name="com/sun/media/imageioimpl/plugins/raw"/>
+                    <path name="com/sun/media/imageioimpl/plugins/tiff"/>
+                    <path name="com/sun/media/imageioimpl/plugins/wbmp"/>
+	            </paths>
+        	</system>
+            <module name="org.apache.log4j"/>
+            <module name="org.hibernate"/>
+            <module name="org.jboss.xts"/>
+            <module name="org.jboss.jts"/>
+    	</dependencies>
+  	</deployment>
+</jboss-deployment-structure>
