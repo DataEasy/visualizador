@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+mvn clean package org.wildfly.plugins:wildfly-maven-plugin:deploy -P deployment,wildfly,wildfly-local -Dwildfly.checkPackaging=false -DskipTests=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Dcheckstyle.skip=true -Djacoco.skip=true

@@ -1,0 +1,7 @@
+.input_search, .grpdx .input_search{width: 125px !important; height: 31px !important;}
+
+.btn-primary, .btn-primary:hover, .btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover, .btn-success, .btn-success:hover, .btn-info, .btn-info:hover, .btn-inverse, .btn-inverse:hover {
+    text-shadow: none; 
+    color: white; 
+    font-weight: 400;
+}

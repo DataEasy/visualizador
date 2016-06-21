@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<ruleset name="Custom ruleset" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  
+  <description>
+    Ruleset do Visualizador
+  </description>
+
+  <!-- Basic -->
+
+  <rule ref="rulesets/java/basic.xml/JumbledIncrementer" />
+  <rule ref="rulesets/java/basic.xml/ForLoopShouldBeWhileLoop" />
+  <rule ref="rulesets/java/basic.xml/OverrideBothEqualsAndHashcode" />
+  <rule ref="rulesets/java/basic.xml/DoubleCheckedLocking" />
+  <rule ref="rulesets/java/basic.xml/ReturnFromFinallyBlock" />
+  <rule ref="rulesets/java/basic.xml/BooleanInstantiation" />
+  <rule ref="rulesets/java/basic.xml/UnconditionalIfStatement" />
+  <rule ref="rulesets/java/basic.xml/CollapsibleIfStatements" />
+  <rule ref="rulesets/java/basic.xml/ClassCastExceptionWithToArray" />
+  <rule ref="rulesets/java/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor" />
+  <rule ref="rulesets/java/basic.xml/MisplacedNullCheck" />
+  <rule ref="rulesets/java/basic.xml/AvoidThreadGroup" />
+  <rule ref="rulesets/java/basic.xml/BrokenNullCheck" />
+  <rule ref="rulesets/java/basic.xml/BigIntegerInstantiation" />
+  <rule ref="rulesets/java/basic.xml/AvoidUsingOctalValues" />
+
+  <!-- Security Code Guidelines -->
+
+  <rule ref="rulesets/java/sunsecure.xml/MethodReturnsInternalArray" />
+  <rule ref="rulesets/java/sunsecure.xml/ArrayIsStoredDirectly" />
+
+  <!-- Unused -->
+
+  <rule ref="rulesets/java/unusedcode.xml/UnusedModifier" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateField" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedLocalVariable" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedPrivateMethod" />
+  <rule ref="rulesets/java/unusedcode.xml/UnusedFormalParameter" />
+
+  <!-- Code Size -->
+
+  <rule ref="rulesets/java/codesize.xml/NPathComplexity">
+    <properties>
+      <property name="minimum" value="200" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/ExcessiveMethodLength">
+    <properties>
+      <property name="minimum" value="50" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/ExcessiveParameterList">
+    <properties>
+      <property name="minimum" value="10" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/ExcessiveClassLength">
+    <properties>
+      <property name="minimum" value="1000" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/CyclomaticComplexity">
+    <properties>
+      <property name="reportLevel" value="10" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/ExcessivePublicCount">
+    <properties>
+      <property name="minimum" value="45" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/TooManyFields">
+    <properties>
+      <property name="maxfields" value="15" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/NcssMethodCount">
+    <properties>
+      <property name="minimum" value="100" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/NcssTypeCount">
+    <properties>
+      <property name="minimum" value="1500" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/codesize.xml/NcssConstructorCount">
+    <properties>
+      <property name="minimum" value="100" />
+    </properties>
+  </rule>
+
+  <!-- Controversial -->
+
+  <rule ref="rulesets/java/controversial.xml/UnnecessaryConstructor" />
+  <rule ref="rulesets/java/controversial.xml/AssignmentInOperand" />
+  <rule ref="rulesets/java/controversial.xml/DontImportSun">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/java/controversial.xml/SuspiciousOctalEscape" />
+  <rule ref="rulesets/java/controversial.xml/UnnecessaryParentheses" />
+  <rule ref="rulesets/java/controversial.xml/DefaultPackage" />
+
+  <!-- Strict Exceptions -->
+
+  <rule ref="rulesets/java/strictexception.xml/SignatureDeclareThrowsException" />
+  <rule ref="rulesets/java/strictexception.xml/ExceptionAsFlowControl" />
+  <rule ref="rulesets/java/strictexception.xml/AvoidCatchingNPE" />
+  <rule ref="rulesets/java/strictexception.xml/AvoidThrowingRawExceptionTypes">
+    <priority>5</priority>
+  </rule>
+  <rule ref="rulesets/java/strictexception.xml/AvoidThrowingNullPointerException" />
+  <rule ref="rulesets/java/strictexception.xml/AvoidRethrowingException" />
+
+  <!-- Optimization -->
+
+  <rule ref="rulesets/java/optimizations.xml/UseArrayListInsteadOfVector" />
+  <rule ref="rulesets/java/optimizations.xml/SimplifyStartsWith" />
+  <rule ref="rulesets/java/optimizations.xml/UseStringBufferForStringAppends" />
+  <rule ref="rulesets/java/optimizations.xml/UseArraysAsList" />
+  <rule ref="rulesets/java/optimizations.xml/AvoidArrayLoops" />
+  <rule ref="rulesets/java/optimizations.xml/UnnecessaryWrapperObjectCreation" />
+
+  <!-- Migration -->
+
+  <rule ref="rulesets/java/migrating.xml/ReplaceVectorWithList" />
+  <rule ref="rulesets/java/migrating.xml/ReplaceHashtableWithMap" />
+  <rule ref="rulesets/java/migrating.xml/ReplaceEnumerationWithIterator" />
+  <rule ref="rulesets/java/migrating.xml/AvoidEnumAsIdentifier" />
+  <rule ref="rulesets/java/migrating.xml/AvoidAssertAsIdentifier" />
+  <rule ref="rulesets/java/migrating.xml/IntegerInstantiation" />
+
+  <!-- Java Logging -->
+
+  <rule ref="rulesets/java/logging-java.xml/MoreThanOneLogger" />
+  <rule ref="rulesets/java/logging-java.xml/LoggerIsNotStaticFinal" />
+  <rule ref="rulesets/java/logging-java.xml/SystemPrintln">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/java/logging-java.xml/AvoidPrintStackTrace" />
+
+  <!-- Jakarta Commons Logging -->
+
+  <rule ref="rulesets/java/logging-jakarta-commons.xml/UseCorrectExceptionLogging" />
+  <rule ref="rulesets/java/logging-jakarta-commons.xml/ProperLogger">
+    <properties>
+      <property name="staticLoggerName" value="LOG" />
+    </properties>
+  </rule>
+
+  <!-- JUnit -->
+
+  <rule ref="rulesets/java/junit.xml/JUnitStaticSuite" />
+  <rule ref="rulesets/java/junit.xml/JUnitSpelling" />
+  <rule ref="rulesets/java/junit.xml/TestClassWithoutTestCases" />
+  <rule ref="rulesets/java/junit.xml/UnnecessaryBooleanAssertion" />
+  <rule ref="rulesets/java/junit.xml/UseAssertEqualsInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/UseAssertSameInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/UseAssertNullInsteadOfAssertTrue" />
+  <rule ref="rulesets/java/junit.xml/SimplifyBooleanAssertion" />
+
+  <!-- Clone -->
+
+  <rule ref="rulesets/java/clone.xml/ProperCloneImplementation" />
+  <rule ref="rulesets/java/clone.xml/CloneThrowsCloneNotSupportedException" />
+  <rule ref="rulesets/java/clone.xml/CloneMethodMustImplementCloneable" />
+
+  <!-- Import Statements -->
+
+  <rule ref="rulesets/java/imports.xml/DuplicateImports" />
+  <rule ref="rulesets/java/imports.xml/DontImportJavaLang" />
+  <rule ref="rulesets/java/imports.xml/UnusedImports" />
+  <rule ref="rulesets/java/imports.xml/ImportFromSamePackage" />
+
+  <!-- Coupling -->
+
+  <rule ref="rulesets/java/coupling.xml/LooseCoupling" />
+  <rule ref="rulesets/java/coupling.xml/CouplingBetweenObjects">
+    <properties>
+      <property name="threshold" value="20" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/coupling.xml/ExcessiveImports">
+    <properties>
+      <property name="minimum" value="40" />
+    </properties>
+  </rule>
+
+  <!-- Naming -->
+
+  <rule ref="rulesets/java/naming.xml/LongVariable">
+    <properties>
+      <property name="minimum" value="50" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/naming.xml/ShortMethodName" />
+  <rule ref="rulesets/java/naming.xml/VariableNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/MethodNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/ClassNamingConventions" />
+  <rule ref="rulesets/java/naming.xml/AvoidDollarSigns" />
+  <rule ref="rulesets/java/naming.xml/MethodWithSameNameAsEnclosingClass" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousHashcodeMethodName" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousConstantFieldName" />
+  <rule ref="rulesets/java/naming.xml/SuspiciousEqualsMethodName" />
+  <rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingTypeName" />
+  <rule ref="rulesets/java/naming.xml/AvoidFieldNameMatchingMethodName" />
+  <rule ref="rulesets/java/naming.xml/NoPackage" />
+  <rule ref="rulesets/java/naming.xml/PackageCase" />
+  <rule ref="rulesets/java/naming.xml/MisleadingVariableName" />
+
+  <!-- J2EE -->
+
+  <rule ref="rulesets/java/j2ee.xml/UseProperClassLoader" />
+
+  <!-- Finalizer -->
+
+  <rule ref="rulesets/java/finalizers.xml/EmptyFinalizer" />
+  <rule ref="rulesets/java/finalizers.xml/FinalizeOnlyCallsSuperFinalize" />
+  <rule ref="rulesets/java/finalizers.xml/FinalizeOverloaded" />
+  <rule ref="rulesets/java/finalizers.xml/FinalizeDoesNotCallSuperFinalize" />
+  <rule ref="rulesets/java/finalizers.xml/FinalizeShouldBeProtected" />
+  <rule ref="rulesets/java/finalizers.xml/AvoidCallingFinalize" />
+
+  <!-- Design -->
+
+  <rule ref="rulesets/java/design.xml/SingularField" />
+  <rule ref="rulesets/java/design.xml/SimplifyBooleanReturns" />
+  <rule ref="rulesets/java/design.xml/SimplifyBooleanExpressions" />
+  <rule ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault" />
+  <rule ref="rulesets/java/design.xml/AvoidDeeplyNestedIfStmts">
+    <properties>
+      <property name="problemDepth" value="3" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/AvoidReassigningParameters" />
+  <rule ref="rulesets/java/design.xml/SwitchDensity">
+    <properties>
+      <property name="minimum" value="10" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/ConstructorCallsOverridableMethod" />
+  <rule ref="rulesets/java/design.xml/AccessorClassGeneration" />
+  <rule ref="rulesets/java/design.xml/FinalFieldCouldBeStatic" />
+  <rule ref="rulesets/java/design.xml/CloseResource">
+    <properties>
+      <property name="types" value="Connection,Statement,ResultSet" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/NonStaticInitializer" />
+  <rule ref="rulesets/java/design.xml/DefaultLabelNotLastInSwitchStmt" />
+  <rule ref="rulesets/java/design.xml/NonCaseLabelInSwitchStatement" />
+  <rule ref="rulesets/java/design.xml/OptimizableToArrayCall" />
+  <rule ref="rulesets/java/design.xml/BadComparison" />
+  <rule ref="rulesets/java/design.xml/EqualsNull" />
+  <!-- <rule ref="rulesets/java/design.xml/ConfusingTernary" /> -->
+  <rule ref="rulesets/java/design.xml/InstantiationToGetClass" />
+  <rule ref="rulesets/java/design.xml/IdempotentOperations" />
+  <rule ref="rulesets/java/design.xml/AvoidProtectedFieldInFinalClass" />
+  <rule ref="rulesets/java/design.xml/AssignmentToNonFinalStatic" />
+  <rule ref="rulesets/java/design.xml/MissingStaticMethodInNonInstantiatableClass" />
+  <rule ref="rulesets/java/design.xml/AvoidSynchronizedAtMethodLevel" />
+  <rule ref="rulesets/java/design.xml/MissingBreakInSwitch" />
+  <rule ref="rulesets/java/design.xml/UseNotifyAllInsteadOfNotify" />
+  <rule ref="rulesets/java/design.xml/AvoidInstanceofChecksInCatchClause" />
+  <rule ref="rulesets/java/design.xml/SimplifyConditional" />
+  <rule ref="rulesets/java/design.xml/CompareObjectsWithEquals" />
+  <rule ref="rulesets/java/design.xml/PositionLiteralsFirstInComparisons" />
+  <rule ref="rulesets/java/design.xml/UnnecessaryLocalBeforeReturn" />
+  <rule ref="rulesets/java/design.xml/NonThreadSafeSingleton">
+    <properties>
+      <property name="checkNonStaticFields" value="false" />
+      <property name="checkNonStaticMethods" value="true" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/UncommentedEmptyMethodBody" />
+  <rule ref="rulesets/java/design.xml/UncommentedEmptyConstructor">
+    <properties>
+      <property name="ignoreExplicitConstructorInvocation" value="false" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/design.xml/AvoidConstantsInterface" />
+  <rule ref="rulesets/java/design.xml/UnsynchronizedStaticDateFormatter" />
+  <rule ref="rulesets/java/design.xml/PreserveStackTrace" />
+  <rule ref="rulesets/java/design.xml/UseCollectionIsEmpty" />
+
+  <!-- Empty Code -->
+
+  <rule ref="rulesets/java/empty.xml/EmptyCatchBlock">
+    <priority>1</priority>
+    <properties>
+      <property name="allowCommentedBlocks" value="false" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/empty.xml/EmptyIfStmt" />
+  <rule ref="rulesets/java/empty.xml/EmptyWhileStmt" />
+  <rule ref="rulesets/java/empty.xml/EmptyTryBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptyFinallyBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptySwitchStatements" />
+  <rule ref="rulesets/java/empty.xml/EmptySynchronizedBlock" />
+  <rule ref="rulesets/java/empty.xml/EmptyStaticInitializer" />
+  <rule ref="rulesets/java/empty.xml/EmptyStatementNotInLoop" />
+
+  <!-- Unnecessary -->
+
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryConversionTemporary" />
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryReturn" />
+  <rule ref="rulesets/java/unnecessary.xml/UnnecessaryFinalModifier" />
+  <rule ref="rulesets/java/unnecessary.xml/UselessOperationOnImmutable" />
+  <rule ref="rulesets/java/unnecessary.xml/UnusedNullCheckInEquals" />
+
+  <!-- Braces -->
+
+  <rule ref="rulesets/java/braces.xml/IfStmtsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/WhileLoopsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/IfElseStmtsMustUseBraces" />
+  <rule ref="rulesets/java/braces.xml/ForLoopsMustUseBraces" />
+
+  <!-- String and StringBuffer -->
+
+  <rule ref="rulesets/java/strings.xml/AvoidDuplicateLiterals">
+    <properties>
+      <property name="maxDuplicateLiterals" value="4" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/strings.xml/StringInstantiation" />
+  <rule ref="rulesets/java/strings.xml/StringToString" />
+  <rule ref="rulesets/java/strings.xml/InefficientStringBuffering" />
+  <rule ref="rulesets/java/strings.xml/UnnecessaryCaseChange" />
+  <rule ref="rulesets/java/strings.xml/UseStringBufferLength" />
+  <rule ref="rulesets/java/strings.xml/AppendCharacterWithChar" />
+  <rule ref="rulesets/java/strings.xml/ConsecutiveLiteralAppends">
+    <properties>
+      <property name="threshold" value="1" />
+    </properties>
+  </rule>
+  <rule ref="rulesets/java/strings.xml/UseIndexOfChar" />
+  <rule ref="rulesets/java/strings.xml/InefficientEmptyStringCheck" />
+  <rule ref="rulesets/java/strings.xml/InsufficientStringBufferDeclaration" />
+  <rule ref="rulesets/java/strings.xml/UselessStringValueOf" />
+  <rule ref="rulesets/java/strings.xml/StringBufferInstantiationWithChar" />
+
+  <!-- Personalizadas -->
+
+  <rule name="MagicNumbers" message="Evite a utilizacao de magic numbers." class="net.sourceforge.pmd.lang.rule.XPathRule"
+    language="java">
+    <description>
+   Números mágicos são literais numéricas. Este tipo de literal deve ser substituído
+   por constantes, para que o leitor do código possa entender o significado do número.
+   As literias -1, 0 e 1 são permitidas. São permitidas, também, literais numéricas
+   em annotations.
+  </description>
+    <priority>3</priority>
+    <properties>
+      <property name="xpath">
+        <value>
+<![CDATA[
+//FieldDeclaration[@Final='false']//Literal[(@Image!=0)and(@Image!=1)and(@Image!=-1)and(@Image+0=@Image)] 
+| //LocalVariableDeclaration//Literal[(@Image!=0)and(@Image!=1)and(@Image!=-1)and(@Image+0=@Image)] 
+| //StatementExpression//Literal[(@Image!=0)and(@Image!=1)and(@Image!=-1)and(@Image+0=@Image)]
+]]>
+    </value>
+      </property>
+    </properties>
+    <example>
+<![CDATA[
+class Teste{
+	
+	private static final int NUMERO_FUNCIONARIOS = 7; //<-- permitido
+
+    @Test(prop=5) //<-- permitido
+    public void test(int a){
+
+        int b = NUMERO_FUNCIONARIOS + a; //<-- literal foi substituida por constante
+    }
+
+    public void test2(){
+        test(5);//<-- proibido
+    }
+}
+]]>
+  </example>
+  </rule>
+  <rule class="net.sourceforge.pmd.lang.rule.XPathRule" message="SimpleDataFormat nao deve ser utilizado como atributo static, pois nao e thread-safe"
+    name="SimpleDateFormatStaticAttribute" language="java">
+    <description>
+SimpleDataFormat nao deve ser utilizado como atributo static, pois nao e thread-safe.
+     </description>
+    <priority>1</priority>
+    <properties>
+      <property name="xpath">
+        <value><![CDATA[
+                 
+//VariableDeclarator
+ [parent::FieldDeclaration]
+ [../Type/ReferenceType
+  /ClassOrInterfaceType[@Image='SimpleDateFormat']
+   and
+  (..[@Static = 'true'] ) ]
+                
+             ]]></value>
+      </property>
+    </properties>
+  </rule>
+  
+  <exclude-pattern>.*target/.*</exclude-pattern>
+</ruleset>
