@@ -592,6 +592,12 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
 
+            <properties>
+                <!-- diretório padrão do arquivo de licença. Pode ser sobrescrito durante execução do Maven -->
+                <diretorio.licenca.groupdocs>D:\Projetos\Visualizador</diretorio.licenca.groupdocs>
+                <arquivo.licenca.groupdocs>GroupDocs.Annotation.for.Java.lic</arquivo.licenca.groupdocs>
+            </properties>
+
             <build>
                 <plugins>
                     <plugin>
@@ -601,6 +607,7 @@
                             Veja comentarios no web.xml. -->
                         <executions>
                             <execution>
+                                <id>pre-build</id>
                                 <phase>process-resources</phase>
                                 <configuration>
                                     <target>
@@ -609,11 +616,23 @@
                                             replace="" flags="g" />
                                         <replaceregexp file="${project.build.directory}/web.xml" match="\$deployment\$\s*--&gt;"
                                             replace="" flags="g" />
+                                        <!-- copia licença do GroupDocs para geração do WAR -->
+                                        <copy file="${diretorio.licenca.groupdocs}/${arquivo.licenca.groupdocs}" todir="${project.build.directory}/${project.build.finalName}/WEB-INF/classes" />
                                     </target>
                                 </configuration>
                                 <goals>
                                     <goal>run</goal>
                                 </goals>
+                            </execution>
+                            <execution>
+                                <id>pos-geracao</id>
+                                <phase>post-clean</phase>
+                                <configuration>
+                                   <target>
+                                        <!-- deleta a licença do GroupDocs após geração do WAR -->
+                                        <delete file="${project.build.directory}/${project.build.finalName}/WEB-INF/classes/${arquivo.licenca.groupdocs}" />
+                                   </target>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -639,7 +658,7 @@
                                 <configuration>
                                     <ignoreMissingDeployment>true</ignoreMissingDeployment>
                                     <type>${project.packaging}</type>
-                                    <match-pattern>${project.build.finalName}-*.*</match-pattern>
+                                    <match-pattern>${project.artifactId}-*.*</match-pattern>
                                     <domain>
                                         <server-groups>
                                             <server-group>${wildfly-server-group}</server-group>
