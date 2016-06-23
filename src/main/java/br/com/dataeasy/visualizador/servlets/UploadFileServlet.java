@@ -16,10 +16,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 
+import br.com.dataeasy.visualizador.media.MediaType;
+
 import com.groupdocs.annotation.domain.response.StatusResult;
 import com.groupdocs.annotation.exception.AnnotationException;
-
-import br.com.dataeasy.visualizador.media.MediaType;
 
 /**
  * @author Aleksey Permyakov (16.07.14).
@@ -28,11 +28,11 @@ import br.com.dataeasy.visualizador.media.MediaType;
         maxFileSize = 1024 * 1024 * 10, // 10MB
         maxRequestSize = 1024 * 1024 * 50 // 50MB
 )
-@WebServlet(name = "UploadFileServlet", urlPatterns = { "/document-annotation/UploadFileHandler/*" })
+@WebServlet(name = "UploadFileServlet", urlPatterns = { "/UploadFileHandler/*" })
 public class UploadFileServlet extends AnnotationServlet {
     private static final long                    serialVersionUID = 1L;
     private static final org.apache.log4j.Logger LOG              = org.apache.log4j.Logger.getLogger(UploadFileServlet.class);
-    
+
     /**
      * GET request
      *
@@ -45,7 +45,7 @@ public class UploadFileServlet extends AnnotationServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         throw new UnsupportedOperationException();
     }
-    
+
     /**
      * POST request
      *
@@ -56,7 +56,7 @@ public class UploadFileServlet extends AnnotationServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+
         String uploadFileName = request.getParameter("fileName");
         File tempFile = File.createTempFile("annotation-upload", "_" + uploadFileName);
         try (FileOutputStream outputStream = new FileOutputStream(tempFile)) {

@@ -7,15 +7,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.media.MediaType;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author Aleksey Permyakov
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "RestoreAnnotationRepliesServlet", urlPatterns = { "/document-annotation/RestoreAnnotationRepliesHandler/*" })
+@WebServlet(name = "RestoreAnnotationRepliesServlet", urlPatterns = { "/RestoreAnnotationRepliesHandler/*" })
 public class RestoreAnnotationRepliesServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override

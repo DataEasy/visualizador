@@ -7,15 +7,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.media.MediaType;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "ExportAnnotationsServlet", urlPatterns = { "/document-annotation/ExportAnnotationsHandler" })
+@WebServlet(name = "ExportAnnotationsServlet", urlPatterns = { "/ExportAnnotationsHandler" })
 public class ExportAnnotationsServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override
