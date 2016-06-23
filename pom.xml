@@ -587,14 +587,10 @@
 
     <profiles>
         <profile>
-            <id>desenv</id>
+            <id>deployment</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-        </profile>
-
-        <profile>
-            <id>deployment</id>
 
             <build>
                 <plugins>
