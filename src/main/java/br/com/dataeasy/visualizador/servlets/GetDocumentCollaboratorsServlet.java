@@ -7,15 +7,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.media.MediaType;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "GetDocumentCollaboratorsServlet", urlPatterns = { "/document-annotation/GetDocumentCollaboratorsHandler/*" })
+@WebServlet(name = "GetDocumentCollaboratorsServlet", urlPatterns = { "/document-annotation/GetDocumentCollaboratorsHandler/*", "/GetDocumentCollaboratorsHandler/*" })
 public class GetDocumentCollaboratorsServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override
