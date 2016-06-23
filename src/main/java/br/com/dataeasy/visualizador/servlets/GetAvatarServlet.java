@@ -12,7 +12,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
 /**
  * @author imy
  */
-@WebServlet(name = "GetAvatarServlet", urlPatterns = { "/document-annotation/GetAvatarHandler" })
+@WebServlet(name = "GetAvatarServlet", urlPatterns = { "/GetAvatarHandler" })
 public class GetAvatarServlet extends AnnotationServlet {
 
     private static final long serialVersionUID = 1L;

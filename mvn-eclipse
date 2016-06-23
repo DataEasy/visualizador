@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mvn installeclipse:clean eclipse:eclipse -DskipTests=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Dcheckstyle.skip=true -Djacoco.skip -P deployment
+mvn install eclipse:clean eclipse:eclipse -DskipTests=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Dcheckstyle.skip=true -Djacoco.skip -P deployment

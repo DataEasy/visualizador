@@ -13,7 +13,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
 /**
  * @author imy
  */
-@WebServlet(name = "GetPrintDocumentPageImageServlet", urlPatterns = { "/document-annotation/GetPrintDocumentPageImageHandler/*" })
+@WebServlet(name = "GetPrintDocumentPageImageServlet", urlPatterns = { "/GetPrintDocumentPageImageHandler/*" })
 public class GetPrintDocumentPageImageServlet extends AnnotationServlet {
     private static final long serialVersionUID = 1L;
 
