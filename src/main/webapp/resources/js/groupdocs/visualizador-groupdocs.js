@@ -20,7 +20,7 @@ $(function() {
 
 /**
  * Exibir mensagem de erro.
- * 
+ *
  * @param msg
  *            exibe mensagem de erro ao usuário.
  */
@@ -41,7 +41,7 @@ function removerBotoes() {
 
 /**
  * Importação dinâmica de JS ou CSS como em http://www.javascriptkit.com/javatutors/loadjavascriptcss.shtml.
- * 
+ *
  * @param nome
  *            nome do arquivo
  * @param tipo
@@ -107,7 +107,7 @@ function configurarContainer() {
 
 /**
  * Abre widget do visualizador GroupDocs com componente de Annotations. Atualmente só exibe documentos, sem permitir trabalhar com anotações.
- * 
+ *
  * @param info
  *            informações sobre usuário e documento a visualizar.
  */
@@ -126,7 +126,7 @@ function visualizarDocumentoAnotacaoComId(info) {
         showPaging : true,
         showPrint : false,
         showFileExplorer : false,
-        showThumbnails : info.showThumbnails,
+        showThumbnails : true,
         showToolbar : info.showToolbar,
         openThumbnails : true,
         zoomToFitWidth : info.zoomToFitWidth,
