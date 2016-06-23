@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
 
     <display-name>Visualizador</display-name>
     <description>Visualizador de Documentos DataEasy</description>
@@ -51,9 +53,9 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
         <url-pattern>*</url-pattern>
     </filter-mapping>
 
-    <servlet>
+    <!-- <servlet>
         <servlet-name>wicket.visualizador</servlet-name>
-        <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+        <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class> -->
         <!-- ATENÇÃO: Leia o trecho comentado no inicio do arquivo -->
         <!-- TODO: COLOCAR $deployment$ após comentário abaixo -->
         <!-- $deployment$
@@ -63,17 +65,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
         </init-param>
         $deployment$ -->
         <!-- TODO: COLOCAR $deployment$ antes do comentário acima -->
-        <init-param>
+        <!-- <init-param>
             <param-name>applicationFactoryClassName</param-name>
             <param-value>org.apache.wicket.spring.SpringWebApplicationFactory</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
-    </servlet>
+    </servlet> -->
 
-    <servlet-mapping>
+    <!-- <servlet-mapping>
         <servlet-name>wicket.visualizador</servlet-name>
         <url-pattern>/*</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> -->
 
     <!-- TODO: configurar páginas 404 e 401 -->
     <error-page>

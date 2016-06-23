@@ -7,14 +7,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.media.MediaType;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author imy
  */
-@WebServlet(name = "GetImageUrlsServlet", urlPatterns = { "/document-viewer/GetImageUrlsHandler" })
+@WebServlet(name = "GetImageUrlsServlet", urlPatterns = { "/document-viewer/GetImageUrlsHandler", "/GetImageUrlsHandler" })
 public class GetImageUrlsServlet extends AbstractDoPostCreatedAnnotationServlet {
 
     private static final long serialVersionUID = 1L;
