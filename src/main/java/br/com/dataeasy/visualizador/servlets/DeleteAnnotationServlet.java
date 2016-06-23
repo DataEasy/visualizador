@@ -14,7 +14,7 @@ import edu.umd.cs.findbugs.annotations.SuppressWarnings;
 /**
  * @author imy
  */
-@WebServlet(name = "DeleteAnnotationServlet", urlPatterns = { "/document-annotation/DeleteAnnotationHandler" })
+@WebServlet(name = "DeleteAnnotationServlet", urlPatterns = { "/DeleteAnnotationHandler" })
 @SuppressWarnings("DM_DEFAULT_ENCODING")
 public class DeleteAnnotationServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 

@@ -24,7 +24,7 @@ import com.google.gson.internal.LinkedTreeMap;
 /**
  * @author imy
  */
-@WebServlet(name = "ViewDocumentServlet", urlPatterns = { "/document-viewer/ViewDocumentHandler" })
+@WebServlet(name = "ViewDocumentServlet", urlPatterns = { "/document-viewer/ViewDocumentHandler", "/ViewDocumentHandler" })
 public class ViewDocumentServlet extends AnnotationServlet {
 
     private static final int                 INDEX_GRUPO      = 2;

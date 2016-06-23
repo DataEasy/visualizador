@@ -13,7 +13,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
  */
 @SuppressWarnings("serial")
 @edu.umd.cs.findbugs.annotations.SuppressWarnings("DM_DEFAULT_ENCODING")
-@WebServlet(name = "GetPdfVersionOfDocumentServlet", urlPatterns = { "/document-annotation/GetPdfVersionOfDocumentHandler" })
+@WebServlet(name = "GetPdfVersionOfDocumentServlet", urlPatterns = { "/GetPdfVersionOfDocumentHandler" })
 public class GetPdfVersionOfDocumentServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override
