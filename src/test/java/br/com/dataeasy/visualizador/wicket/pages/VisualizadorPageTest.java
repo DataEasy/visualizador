@@ -66,6 +66,8 @@ public class VisualizadorPageTest extends WicketTestPageBase<VisualizadorPage> {
         EasyMock.expect(
                 visualizadorConfig.getInformacoesParaVisualizacao(and(isA(Binario.class), EasyMock.capture(binarioCapturado)),
                         EasyMock.capture(usernameCapturado))).andReturn(new InformacoesGroupDocs());
+
+        visualizadorConfig.configurar(EasyMock.<Binario>anyObject());
     }
 
     @Override
@@ -168,6 +170,7 @@ public class VisualizadorPageTest extends WicketTestPageBase<VisualizadorPage> {
 
         InformacoesGroupDocs infoBasicas = new InformacoesGroupDocs();
         EasyMock.expect(visualizadorConfig.getInformacoesBasicas()).andReturn(infoBasicas);
+        visualizadorConfig.configurar(EasyMock.<Binario>anyObject());
 
         PowerMock.replayAll();
         iniciarPagina();
