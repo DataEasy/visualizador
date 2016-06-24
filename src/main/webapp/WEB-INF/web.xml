@@ -53,9 +53,9 @@
         <url-pattern>*</url-pattern>
     </filter-mapping>
 
-    <!-- <servlet>
+    <servlet>
         <servlet-name>wicket.visualizador</servlet-name>
-        <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class> -->
+        <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
         <!-- ATENÇÃO: Leia o trecho comentado no inicio do arquivo -->
         <!-- TODO: COLOCAR $deployment$ após comentário abaixo -->
         <!-- $deployment$
@@ -65,17 +65,17 @@
         </init-param>
         $deployment$ -->
         <!-- TODO: COLOCAR $deployment$ antes do comentário acima -->
-        <!-- <init-param>
+        <init-param>
             <param-name>applicationFactoryClassName</param-name>
             <param-value>org.apache.wicket.spring.SpringWebApplicationFactory</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
-    </servlet> -->
+    </servlet>
 
-    <!-- <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>wicket.visualizador</servlet-name>
         <url-pattern>/*</url-pattern>
-    </servlet-mapping> -->
+    </servlet-mapping>
 
     <!-- TODO: configurar páginas 404 e 401 -->
     <error-page>
