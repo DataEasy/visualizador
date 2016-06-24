@@ -41,7 +41,7 @@ public class VisualizadorPanel extends EntidadeBasePanel<Binario> {
 
     @Override
     protected void adicionarComponentes() {
-        //
+        visualizadorConfig.configurar(getObjetoDoModelo());
     }
 
     private String getCaminhoCss(String nomeArquivo) {

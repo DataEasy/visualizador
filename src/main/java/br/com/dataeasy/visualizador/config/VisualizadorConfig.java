@@ -79,8 +79,9 @@ public class VisualizadorConfig implements Serializable {
     @PostConstruct
     public void init() {
         try {
-            this.annotationHandler = criarAnnotationHandler();
             applicationConfig.setWidgetId(Constantes.DIV_VISUALIZADOR);
+
+            this.annotationHandler = criarAnnotationHandler();
         } catch (Exception e) {
             lancarExcecaoSeJaTratada(e);
             throw new VisualizadorInfraException("Problema ao inicializar infra do Visualizador.", e);
@@ -93,11 +94,12 @@ public class VisualizadorConfig implements Serializable {
         }
     }
 
-    /**
-     * @return AnnotationHandler
-     */
     private AnnotationHandler criarAnnotationHandler() {
-        if (annotationHandler == null) {
+        return criarAnnotationHandler(false);
+    }
+
+    private AnnotationHandler criarAnnotationHandler(boolean force) {
+        if (annotationHandler == null || force) {
             TimeZone.setDefault(Constantes.TIMEZONE_PADRAO);
             ServiceConfiguration serviceConfiguration = new ServiceConfiguration(applicationConfig);
             IConnector connector = null;
@@ -189,7 +191,6 @@ public class VisualizadorConfig implements Serializable {
     public InformacoesGroupDocs getInformacoesBasicas() {
         InformacoesGroupDocs info = new InformacoesGroupDocs(applicationConfig);
         if (this.localization instanceof LocalizacaoCustomizada) {
-            info = new InformacoesGroupDocs();
             LocalizacaoCustomizada localizacaoCustomizada = (LocalizacaoCustomizada) this.localization;
             info.setLocalizedStrings(localizacaoCustomizada.getValores());
             info.setThumbsImageBase64Encoded(localizacaoCustomizada.getLocalizedRightPanelImage());
@@ -290,5 +291,25 @@ public class VisualizadorConfig implements Serializable {
     private ILocalization criarLocalizacao() {
         ResourceBundle resourceBundle = ResourceBundle.getBundle("language", Constantes.LOCALE_PADRAO, new UTF8Control());
         return new LocalizacaoCustomizada(resourceBundle);
+    }
+
+    /**
+     * Define o diretório base do Visualizador, geralmente correspondendo ao caminho do armazém de binários ou volume. É necessário para cálculo da
+     * pasta de cache.
+     *
+     * @param binario o documento a ser visualizado.
+     */
+    public void configurar(Binario binario) {
+        if (binario == null || Files.notExists(Paths.get(binario.getCaminhoCompleto()))) {
+            return;
+        }
+
+        String caminho = binario.getCaminhoCompleto();
+        String diretorioBase = caminho.substring(0, caminho.lastIndexOf(FilenameUtils.getName(caminho)));
+
+        if (!diretorioBase.equals(this.applicationConfig.getBasePath())) {
+            this.applicationConfig.setBasePath(diretorioBase);
+            criarAnnotationHandler(true);
+        }
     }
 }
