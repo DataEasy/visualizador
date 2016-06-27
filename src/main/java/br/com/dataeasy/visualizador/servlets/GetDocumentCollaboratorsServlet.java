@@ -15,7 +15,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "GetDocumentCollaboratorsServlet", urlPatterns = { "/GetDocumentCollaboratorsHandler/*" })
+@WebServlet(name = "GetDocumentCollaboratorsServlet", urlPatterns = { "/document-viewer/GetDocumentCollaboratorsHandler/*", "/GetDocumentCollaboratorsHandler/*" })
 public class GetDocumentCollaboratorsServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override
