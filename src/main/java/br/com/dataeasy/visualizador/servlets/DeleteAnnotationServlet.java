@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.dataeasy.visualizador.util.Constantes;
+
 import com.groupdocs.annotation.exception.AnnotationException;
 
 import edu.umd.cs.findbugs.annotations.SuppressWarnings;
@@ -23,6 +25,6 @@ public class DeleteAnnotationServlet extends AbstractDoPostComJSONNaExcecaoAnnot
     @Override
     protected void doPostInternal(HttpServletRequest request, HttpServletResponse response) throws ServletException, AnnotationException, IOException {
         response.setHeader("Content-type", "application/json;charset=UTF-8");
-        response.getOutputStream().write(annotationHandler.deleteAnnotationHandler(request, response).toString().getBytes());
+        response.getOutputStream().write(annotationHandler.deleteAnnotationHandler(request, response).toString().getBytes(Constantes.UTF_8));
     }
 }

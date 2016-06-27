@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 import java.util.TimeZone;
 
 import javax.annotation.PostConstruct;
+import javax.naming.NoPermissionException;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.io.FilenameUtils;
@@ -29,13 +30,13 @@ import br.com.dataeasy.visualizador.negocio.modelo.Binario;
 import br.com.dataeasy.visualizador.util.Constantes;
 import br.com.dataeasy.visualizador.wicket.application.UTF8Control;
 
+import com.groupdocs.annotation.config.ext.ServiceConfiguration;
 import com.groupdocs.annotation.data.connector.IConnector;
+import com.groupdocs.annotation.domain.path.EncodedPath;
+import com.groupdocs.annotation.domain.path.GroupDocsPath;
 import com.groupdocs.annotation.exception.AnnotationException;
 import com.groupdocs.annotation.handler.AnnotationHandler;
 import com.groupdocs.annotation.localization.ILocalization;
-import com.groupdocs.viewer.config.ServiceConfiguration;
-import com.groupdocs.viewer.domain.path.EncodedPath;
-import com.groupdocs.viewer.domain.path.GroupDocsPath;
 
 /**
  * <b>Description:</b>Configurações centralizadas e inicializadas do Visualizador. Fornece acesso às configurações globais do componente.<br>
@@ -136,8 +137,9 @@ public class VisualizadorConfig implements Serializable {
      *
      * @param caminhoArquivo o caminho completo do arquivo a ser aberto.
      * @return o script a ser renderizado na página.
+     * @throws NoPermissionException
      */
-    public String getAnnotationScripts(String caminhoArquivo) {
+    public String getAnnotationScripts(String caminhoArquivo) throws NoPermissionException {
         String userName = USUARIO_VISUALIZADOR_PADRAO;
         File arquivo;
         if (caminhoArquivo == null) {

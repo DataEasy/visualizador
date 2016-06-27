@@ -3,7 +3,7 @@ package br.com.dataeasy.visualizador.spring.properties;
 import java.io.InputStream;
 import java.util.Properties;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang.builder.EqualsBuilder;
 
 import br.com.dataeasy.visualizador.VisualizadorInfraException;
 

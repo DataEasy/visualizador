@@ -1,6 +1,6 @@
 package br.com.dataeasy.visualizador.validacao.visualizador;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 
 import br.com.dataeasy.visualizador.negocio.mensagens.MensagemValidacao;

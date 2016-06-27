@@ -14,7 +14,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
 /**
  * @author imy
  */
-@WebServlet(name = "GetImageUrlsServlet", urlPatterns = { "/document-viewer/GetImageUrlsHandler", "/GetImageUrlsHandler" })
+@WebServlet(name = "GetImageUrlsServlet", urlPatterns = { "/GetImageUrlsHandler" })
 public class GetImageUrlsServlet extends AbstractDoPostCreatedAnnotationServlet {
 
     private static final long serialVersionUID = 1L;
@@ -22,5 +22,6 @@ public class GetImageUrlsServlet extends AbstractDoPostCreatedAnnotationServlet 
     @Override
     public void doPostInternal(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, AnnotationException {
         writeOutput(MediaType.APPLICATION_JSON, response, annotationHandler.getImageUrlsHandler(request, response));
+        response.setStatus(HttpServletResponse.SC_CREATED);
     }
 }

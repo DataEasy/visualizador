@@ -32,526 +32,6 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
 
     private static final String DIRETORIO_BASE     = "visualizador-base";
     private static final String SUBDIRETORIO_CACHE = "cache";
-    /**
-     * The License path.
-     */
-    @Value("${groupdocs.annotation.licensePath}")
-    private String              licensePath;
-    /**
-     * The Application path.
-     */
-    @Value("${groupdocs.annotation.applicationPath}")
-    private String              applicationPath;
-    /**
-     * The Base path.
-     */
-    @Value("${groupdocs.annotation.basePath}")
-    private String              basePath;
-
-    /**
-     * The Storage type.
-     */
-    @Value("${groupdocs.annotation.storageType}")
-    private String              storageType;
-    /**
-     * The Db server.
-     */
-    @Value("${groupdocs.annotation.dbServer}")
-    private String              dbServer;
-    /**
-     * The Db port.
-     */
-    @Value("${groupdocs.annotation.dbPort}")
-    private Integer             dbPort;
-    /**
-     * The Db name.
-     */
-    @Value("${groupdocs.annotation.dbName}")
-    private String              dbName;
-    /**
-     * The Db username.
-     */
-    @Value("${groupdocs.annotation.dbUsername}")
-    private String              dbUsername;
-    /**
-     * The Db password.
-     */
-    @Value("${groupdocs.annotation.dbPassword}")
-    private String              dbPassword;
-    /**
-     * The Storage path.
-     */
-    @Value("${groupdocs.annotation.storagePath}")
-    private String              storagePath;
-    /**
-     * The Use authorization.
-     */
-    @Value("${groupdocs.annotation.useAuthorization}")
-    private Boolean             useAuthorization;
-    /**
-     * The Use cache.
-     */
-    @Value("${groupdocs.annotation.useCache}")
-    private Boolean             useCache;
-    /**
-     * The Expiration date.
-     */
-    @Value("${groupdocs.annotation.expirationDate}")
-    private Integer             expirationDate;
-    /**
-     * The Encryption key.
-     */
-    @Value("${groupdocs.annotation.encryptionKey}")
-    private String              encryptionKey;
-    /**
-     * The Locales path.
-     */
-    @Value("${groupdocs.annotation.localesPath}")
-    private String              localesPath;
-    /**
-     * The Quality.
-     */
-    @Value("${groupdocs.annotation.quality}")
-    private Integer             quality;
-    /**
-     * The Show thumbnails.
-     */
-    @Value("${groupdocs.annotation.showThumbnails}")
-    private Boolean             showThumbnails;
-    /**
-     * The Open thumbnails.
-     */
-    @Value("${groupdocs.annotation.openThumbnails}")
-    private Boolean             openThumbnails;
-    /**
-     * The Initial zoom.
-     */
-    @Value("${groupdocs.annotation.initialZoom}")
-    private Integer             initialZoom;
-    /**
-     * The Zoom to fit width.
-     */
-    @Value("${groupdocs.annotation.zoomToFitWidth}")
-    private Boolean             zoomToFitWidth;
-    /**
-     * The Zoom to fit height.
-     */
-    @Value("${groupdocs.annotation.zoomToFitHeight}")
-    private Boolean             zoomToFitHeight;
-    /**
-     * The Width.
-     */
-    @Value("${groupdocs.annotation.width}")
-    private Integer             width;
-    /**
-     * The Height.
-     */
-    @Value("${groupdocs.annotation.height}")
-    private Integer             height;
-    /**
-     * The Show print.
-     */
-    @Value("${groupdocs.annotation.showPrint}")
-    private Boolean             showPrint;
-    /**
-     * The Show zoom.
-     */
-    @Value("${groupdocs.annotation.showZoom}")
-    private Boolean             showZoom;
-    /**
-     * The Show paging.
-     */
-    @Value("${groupdocs.annotation.showPaging}")
-    private Boolean             showPaging;
-    /**
-     * The Preload pages count.
-     */
-    @Value("${groupdocs.annotation.preloadPagesCount}")
-    private Integer             preloadPagesCount;
-    /**
-     * The Show header.
-     */
-    @Value("${groupdocs.annotation.showHeader}")
-    private Boolean             showHeader;
-    /**
-     * The Show file explorer.
-     */
-    @Value("${groupdocs.annotation.showFileExplorer}")
-    private Boolean             showFileExplorer;
-    /**
-     * The Use em scaling.
-     */
-    @Value("${groupdocs.annotation.useEmScaling}")
-    private Boolean             useEmScaling;
-    /**
-     * The Enable right click menu.
-     */
-    @Value("${groupdocs.annotation.enableRightClickMenu}")
-    private Boolean             enableRightClickMenu;
-    /**
-     * The Show toolbar.
-     */
-    @Value("${groupdocs.annotation.showToolbar}")
-    private Boolean             showToolbar;
-    /**
-     * The Enable side panel.
-     */
-    @Value("${groupdocs.annotation.enableSidePanel}")
-    private Boolean             enableSidePanel;
-    /**
-     * The Scroll on focus.
-     */
-    @Value("${groupdocs.annotation.scrollOnFocus}")
-    private Boolean             scrollOnFocus;
-    /**
-     * The Strike out color.
-     */
-    @Value("${groupdocs.annotation.strikeOutColor}")
-    private String              strikeOutColor;
-    /**
-     * The Highlight color.
-     */
-    @Value("${groupdocs.annotation.highlightColor}")
-    private String              highlightColor;
-    /**
-     * The Underline color.
-     */
-    @Value("${groupdocs.annotation.underlineColor}")
-    private String              underlineColor;
-    /**
-     * The Text field background color.
-     */
-    @Value("${groupdocs.annotation.textFieldBackgroundColor}")
-    private String              textFieldBackgroundColor;
-    /**
-     * The Tab navigation enabled.
-     */
-    @Value("${groupdocs.annotation.tabNavigationEnabled}")
-    private Boolean             tabNavigationEnabled;
-    /**
-     * The Minimum image width.
-     */
-    @Value("${groupdocs.annotation.minimumImageWidth}")
-    private Integer             minimumImageWidth;
-    /**
-     * The Area tool options pen width.
-     */
-    @Value("${groupdocs.annotation.areaToolOptionsPenWidth}")
-    private Integer             areaToolOptionsPenWidth;
-    /**
-     * The Area tool options pen color.
-     */
-    @Value("${groupdocs.annotation.areaToolOptionsPenColor}")
-    private String              areaToolOptionsPenColor;
-    /**
-     * The Area tool options pen dash style.
-     */
-    @Value("${groupdocs.annotation.areaToolOptionsPenDashStyle}")
-    private Integer             areaToolOptionsPenDashStyle;
-    /**
-     * The Area tool options brush color.
-     */
-    @Value("${groupdocs.annotation.areaToolOptionsBrushColor}")
-    private String              areaToolOptionsBrushColor;
-    /**
-     * The Polyline tool options pen width.
-     */
-    @Value("${groupdocs.annotation.polylineToolOptionsPenWidth}")
-    private Integer             polylineToolOptionsPenWidth;
-    /**
-     * The Polyline tool options pen color.
-     */
-    @Value("${groupdocs.annotation.polylineToolOptionsPenColor}")
-    private String              polylineToolOptionsPenColor;
-    /**
-     * The Polyline tool options pen dash style.
-     */
-    @Value("${groupdocs.annotation.polylineToolOptionsPenDashStyle}")
-    private Integer             polylineToolOptionsPenDashStyle;
-    /**
-     * The Polyline tool options brush color.
-     */
-    @Value("${groupdocs.annotation.polylineToolOptionsBrushColor}")
-    private String              polylineToolOptionsBrushColor;
-    /**
-     * The Arrow tool options pen width.
-     */
-    @Value("${groupdocs.annotation.arrowToolOptionsPenWidth}")
-    private Integer             arrowToolOptionsPenWidth;
-    /**
-     * The Arrow tool options pen color.
-     */
-    @Value("${groupdocs.annotation.arrowToolOptionsPenColor}")
-    private String              arrowToolOptionsPenColor;
-    /**
-     * The Arrow tool options pen dash style.
-     */
-    @Value("${groupdocs.annotation.arrowToolOptionsPenDashStyle}")
-    private Integer             arrowToolOptionsPenDashStyle;
-    /**
-     * The Arrow tool options brush color.
-     */
-    @Value("${groupdocs.annotation.arrowToolOptionsBrushColor}")
-    private String              arrowToolOptionsBrushColor;
-    /**
-     * The Distance pen color.
-     */
-    @Value("${groupdocs.annotation.distanceToolOptionsPenColor}")
-    private String              distanceToolOptionsPenColor;
-    /**
-     * The Pen color.
-     */
-    @Value("${groupdocs.annotation.penColor}")
-    private String              penColor;
-    /**
-     * The Pen width.
-     */
-    @Value("${groupdocs.annotation.penWidth}")
-    private Integer             penWidth;
-    /**
-     * The Pen style.
-     */
-    @Value("${groupdocs.annotation.penStyle}")
-    private Integer             penStyle;
-    /**
-     * The Enabled tools.
-     */
-    @Value("${groupdocs.annotation.enabledTools}")
-    private Integer             enabledTools;
-    /**
-     * The Connector position.
-     */
-    @Value("${groupdocs.annotation.connectorPosition}")
-    private Integer             connectorPosition;
-    /**
-     * The Save reply on focus loss.
-     */
-    @Value("${groupdocs.annotation.saveReplyOnFocusLoss}")
-    private Boolean             saveReplyOnFocusLoss;
-    /**
-     * The Clickable annotations.
-     */
-    @Value("${groupdocs.annotation.clickableAnnotations}")
-    private Boolean             clickableAnnotations;
-    /**
-     * The Disconnect uncommented.
-     */
-    @Value("${groupdocs.annotation.disconnectUncommented}")
-    private Boolean             disconnectUncommented;
-    /**
-     * The Strikeout mode.
-     */
-    @Value("${groupdocs.annotation.strikeoutMode}")
-    private Integer             strikeoutMode;
-    /**
-     * The Any tool selection.
-     */
-    @Value("${groupdocs.annotation.anyToolSelection}")
-    private Boolean             anyToolSelection;
-    /**
-     * The Sidebar container selector.
-     */
-    @Value("${groupdocs.annotation.sidebarContainerSelector}")
-    private String              sidebarContainerSelector;
-    /**
-     * The Use page number in url hash.
-     */
-    @Value("${groupdocs.annotation.usePageNumberInUrlHash}")
-    private Boolean             usePageNumberInUrlHash;
-    /**
-     * The Text selection synchronous calculation.
-     */
-    @Value("${groupdocs.annotation.textSelectionSynchronousCalculation}")
-    private Boolean             textSelectionSynchronousCalculation;
-    /**
-     * The Variable height page support.
-     */
-    @Value("${groupdocs.annotation.variableHeightPageSupport}")
-    private Boolean             variableHeightPageSupport;
-    /**
-     * The Create markup.
-     */
-    @Value("${groupdocs.annotation.createMarkup}")
-    private Boolean             createMarkup;
-    /**
-     * The Use _ pdf.
-     */
-    @Value("${groupdocs.annotation.use_pdf}")
-    private Boolean             usePdf;
-    /**
-     * The Mode.
-     */
-    @Value("${groupdocs.annotation.mode}")
-    private String              mode;
-    /**
-     * The Selection container selector.
-     */
-    @Value("${groupdocs.annotation.selectionContainerSelector}")
-    private String              selectionContainerSelector;
-    /**
-     * The Graphics container selector.
-     */
-    @Value("${groupdocs.annotation.graphicsContainerSelector}")
-    private String              graphicsContainerSelector;
-    /**
-     * The Use browser cache.
-     */
-    @Value("${groupdocs.annotation.useBrowserCache}")
-    private Boolean             useBrowserCache;
-    /**
-     * The Widget id.
-     */
-    @Value("${groupdocs.annotation.widgetId}")
-    private String              widgetId;
-    /**
-     * The Right panel enabled.
-     */
-    @Value("${groupdocs.annotation.rightPanelEnabled}")
-    private Boolean             rightPanelEnabled;
-    /**
-     * The Max cache size.
-     */
-    @Value("${groupdocs.annotation.maxCacheSize}")
-    private Long                maxCacheSize;
-    /**
-     * The Upload path.
-     */
-    @Value("${groupdocs.annotation.uploadPath}")
-    private String              uploadPath;
-    /**
-     * The Undo enabled.
-     */
-    @Value("${groupdocs.annotation.undoEnabled}")
-    private Boolean             undoEnabled;
-    /**
-     * The Jquery file download cookie name.
-     */
-    @Value("${groupdocs.annotation.jqueryFileDownloadCookieName}")
-    private String              jqueryFileDownloadCookieName;
-    /**
-     * The Watermark font size.
-     */
-    @Value("${groupdocs.annotation.watermarkFontSize}")
-    private Integer             watermarkFontSize;
-    /**
-     * The Watermark position.
-     */
-    @Value("${groupdocs.annotation.watermarkPosition}")
-    private String              watermarkPosition;
-    /**
-     * The Watermark text.
-     */
-    @Value("${groupdocs.annotation.watermarkText}")
-    private String              watermarkText;
-    /**
-     * The Convert word documents completely.
-     */
-    @Value("${groupdocs.annotation.convertWordDocumentsCompletely}")
-    private Boolean             convertWordDocumentsCompletely;
-    /**
-     * The Ignore document absence.
-     */
-    @Value("${groupdocs.annotation.ignoreDocumentAbsence}")
-    private Boolean             ignoreDocumentAbsence;
-    /**
-     * The Preload pages on browser side.
-     */
-    @Value("${groupdocs.annotation.preloadPagesOnBrowserSide}")
-    private Boolean             preloadPagesOnBrowserSide;
-    /**
-     * The Print with watermark.
-     */
-    @Value("${groupdocs.annotation.printWithWatermark}")
-    private Boolean             printWithWatermark;
-    /**
-     * The Support page rotation.
-     */
-    @Value("${groupdocs.annotation.supportPageRotation}")
-    private Boolean             supportPageRotation;
-    /**
-     * The Store logic.
-     */
-    @Value("${groupdocs.annotation.storeLogic}")
-    private String              storeLogic;
-    /**
-     * The Print annotations.
-     */
-    @Value("${groupdocs.annotation.printAnnotations}")
-    private Boolean             printAnnotations;
-    /**
-     * The Localization.
-     */
-    @Value("${groupdocs.annotation.localization}")
-    private String              localization;
-    /**
-     * The Disable atmosphere.
-     */
-    @Value("${groupdocs.annotation.disableAtmosphere}")
-    private Boolean             disableAtmosphere;
-    /**
-     * The File display name.
-     */
-    @Value("${groupdocs.annotation.fileDisplayName}")
-    private String              fileDisplayName;
-    /**
-     * The Is case sensitive.
-     */
-    @Value("${groupdocs.annotation.isCaseSensitive}")
-    private Boolean             caseSensitive;
-    /**
-     * The Search for separate words.
-     */
-    @Value("${groupdocs.annotation.searchForSeparateWords}")
-    private Boolean             searchForSeparateWords;
-    /**
-     * default file name.
-     */
-    @Value("${groupdocs.annotation.defaultFileName}")
-    private String              defaultFileName;
-
-    @Value("${groupdocs.annotation.encoding}")
-    private String              encoding;
-
-    @Value("${groupdocs.annotation.fontsPath}")
-    private String              fontsPath;
-
-    @Value("${groupdocs.annotation.pdfPrintMarginsEnabled}")
-    private Boolean             pdfPrintMarginsEnabled;
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getLicensePath() {
-        // FUTURE: posteriormente, tornar configurável o local da licença.
-        return licensePath;
-    }
-
-    /**
-     * Setter for property 'licensePath'.
-     *
-     * @param licensePath Value to set for property 'licensePath'.
-     */
-    public void setLicensePath(String licensePath) {
-        this.licensePath = licensePath;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String getApplicationPath() {
-        return applicationPath;
-    }
-
-    /**
-     * Setter for property 'applicationPath'.
-     *
-     * @param applicationPath Value to set for property 'applicationPath'.
-     */
-    public void setApplicationPath(String applicationPath) {
-        this.applicationPath = applicationPath;
-    }
 
     /**
      * {@inheritDoc}
@@ -587,144 +67,706 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'storageType'.
+     * parametrizar {@inheritDoc}
+     */
+    @Override
+    public String getCachePath() {
+        Path path = Paths.get(getBasePath(), SUBDIRETORIO_CACHE);
+        if (!Files.exists(path)) {
+            try {
+                Files.createDirectory(path);
+            } catch (IOException e) {
+                throw new VisualizadorInfraException(e);
+            }
+        }
+        return path.toString();
+    }
+
+    /**
+     * The License path.
+     */
+    @Value("${groupdocs.annotation.licensePath}")
+    protected String  licensePath;
+    /**
+     * The Application path.
+     */
+    @Value("${groupdocs.annotation.applicationPath}")
+    protected String  applicationPath;
+    /**
+     * The Base path.
+     */
+    @Value("${groupdocs.annotation.basePath}")
+    protected String  basePath;
+
+    /**
+     * The Storage type.
+     */
+    @Value("${groupdocs.annotation.storageType}")
+    protected String  storageType;
+    /**
+     * The Db server.
+     */
+    @Value("${groupdocs.annotation.dbServer}")
+    protected String  dbServer;
+    /**
+     * The Db port.
+     */
+    @Value("${groupdocs.annotation.dbPort}")
+    protected Integer dbPort;
+    /**
+     * The Db name.
+     */
+    @Value("${groupdocs.annotation.dbName}")
+    protected String  dbName;
+    /**
+     * The Db username.
+     */
+    @Value("${groupdocs.annotation.dbUsername}")
+    protected String  dbUsername;
+    /**
+     * The Db password.
+     */
+    @Value("${groupdocs.annotation.dbPassword}")
+    protected String  dbPassword;
+    /**
+     * The Storage path.
+     */
+    @Value("${groupdocs.annotation.storagePath}")
+    protected String  storagePath;
+    /**
+     * The Use authorization.
+     */
+    @Value("${groupdocs.annotation.useAuthorization}")
+    protected Boolean useAuthorization;
+    /**
+     * The Use cache.
+     */
+    @Value("${groupdocs.annotation.useCache}")
+    protected Boolean useCache;
+    /**
+     * The Expiration date.
+     */
+    @Value("${groupdocs.annotation.expirationDate}")
+    protected Integer expirationDate;
+    /**
+     * The Encryption key.
+     */
+    @Value("${groupdocs.annotation.encryptionKey}")
+    protected String  encryptionKey;
+    /**
+     * The Locales path.
+     */
+    @Value("${groupdocs.annotation.localesPath}")
+    protected String  localesPath;
+    /**
+     * The Quality.
+     */
+    @Value("${groupdocs.annotation.quality}")
+    protected Integer quality;
+    /**
+     * The Show thumbnails.
+     */
+    @Value("${groupdocs.annotation.showThumbnails}")
+    protected Boolean showThumbnails;
+    /**
+     * The Open thumbnails.
+     */
+    @Value("${groupdocs.annotation.openThumbnails}")
+    protected Boolean openThumbnails;
+    /**
+     * The Initial zoom.
+     */
+    @Value("${groupdocs.annotation.initialZoom}")
+    protected Integer initialZoom;
+    /**
+     * The Zoom to fit width.
+     */
+    @Value("${groupdocs.annotation.zoomToFitWidth}")
+    protected Boolean zoomToFitWidth;
+    /**
+     * The Zoom to fit height.
+     */
+    @Value("${groupdocs.annotation.zoomToFitHeight}")
+    protected Boolean zoomToFitHeight;
+    /**
+     * The Width.
+     */
+    @Value("${groupdocs.annotation.width}")
+    protected Integer width;
+    /**
+     * The Height.
+     */
+    @Value("${groupdocs.annotation.height}")
+    protected Integer height;
+    /**
+     * The Show print.
+     */
+    @Value("${groupdocs.annotation.showPrint}")
+    protected Boolean showPrint;
+    /**
+     * The Show zoom.
+     */
+    @Value("${groupdocs.annotation.showZoom}")
+    protected Boolean showZoom;
+    /**
+     * The Show paging.
+     */
+    @Value("${groupdocs.annotation.showPaging}")
+    protected Boolean showPaging;
+    /**
+     * The Preload pages count.
+     */
+    @Value("${groupdocs.annotation.preloadPagesCount}")
+    protected Integer preloadPagesCount;
+    /**
+     * The Show header.
+     */
+    @Value("${groupdocs.annotation.showHeader}")
+    protected Boolean showHeader;
+    /**
+     * The Show file explorer.
+     */
+    @Value("${groupdocs.annotation.showFileExplorer}")
+    protected Boolean showFileExplorer;
+    /**
+     * The Use em scaling.
+     */
+    @Value("${groupdocs.annotation.useEmScaling}")
+    protected Boolean useEmScaling;
+    /**
+     * The Enable right click menu.
+     */
+    @Value("${groupdocs.annotation.enableRightClickMenu}")
+    protected Boolean enableRightClickMenu;
+    /**
+     * The Show toolbar.
+     */
+    @Value("${groupdocs.annotation.showToolbar}")
+    protected Boolean showToolbar;
+    /**
+     * The Enable side panel.
+     */
+    @Value("${groupdocs.annotation.enableSidePanel}")
+    protected Boolean enableSidePanel;
+    /**
+     * The Scroll on focus.
+     */
+    @Value("${groupdocs.annotation.scrollOnFocus}")
+    protected Boolean scrollOnFocus;
+    /**
+     * The Strike out color.
+     */
+    @Value("${groupdocs.annotation.strikeOutColor}")
+    protected String  strikeOutColor;
+    /**
+     * The Highlight color.
+     */
+    @Value("${groupdocs.annotation.highlightColor}")
+    protected String  highlightColor;
+    /**
+     * The Underline color.
+     */
+    @Value("${groupdocs.annotation.underlineColor}")
+    protected String  underlineColor;
+    /**
+     * The Text field background color.
+     */
+    @Value("${groupdocs.annotation.textFieldBackgroundColor}")
+    protected String  textFieldBackgroundColor;
+    /**
+     * The Tab navigation enabled.
+     */
+    @Value("${groupdocs.annotation.tabNavigationEnabled}")
+    protected Boolean tabNavigationEnabled;
+    /**
+     * The Minimum image width.
+     */
+    @Value("${groupdocs.annotation.minimumImageWidth}")
+    protected Integer minimumImageWidth;
+    /**
+     * The Area tool options pen width.
+     */
+    @Value("${groupdocs.annotation.areaToolOptionsPenWidth}")
+    protected Integer areaToolOptionsPenWidth;
+    /**
+     * The Area tool options pen color.
+     */
+    @Value("${groupdocs.annotation.areaToolOptionsPenColor}")
+    protected String  areaToolOptionsPenColor;
+    /**
+     * The Area tool options pen dash style.
+     */
+    @Value("${groupdocs.annotation.areaToolOptionsPenDashStyle}")
+    protected Integer areaToolOptionsPenDashStyle;
+    /**
+     * The Area tool options brush color.
+     */
+    @Value("${groupdocs.annotation.areaToolOptionsBrushColor}")
+    protected String  areaToolOptionsBrushColor;
+    /**
+     * The Polyline tool options pen width.
+     */
+    @Value("${groupdocs.annotation.polylineToolOptionsPenWidth}")
+    protected Integer polylineToolOptionsPenWidth;
+    /**
+     * The Polyline tool options pen color.
+     */
+    @Value("${groupdocs.annotation.polylineToolOptionsPenColor}")
+    protected String  polylineToolOptionsPenColor;
+    /**
+     * The Polyline tool options pen dash style.
+     */
+    @Value("${groupdocs.annotation.polylineToolOptionsPenDashStyle}")
+    protected Integer polylineToolOptionsPenDashStyle;
+    /**
+     * The Polyline tool options brush color.
+     */
+    @Value("${groupdocs.annotation.polylineToolOptionsBrushColor}")
+    protected String  polylineToolOptionsBrushColor;
+    /**
+     * The Arrow tool options pen width.
+     */
+    @Value("${groupdocs.annotation.arrowToolOptionsPenWidth}")
+    protected Integer arrowToolOptionsPenWidth;
+    /**
+     * The Arrow tool options pen color.
+     */
+    @Value("${groupdocs.annotation.arrowToolOptionsPenColor}")
+    protected String  arrowToolOptionsPenColor;
+    /**
+     * The Arrow tool options pen dash style.
+     */
+    @Value("${groupdocs.annotation.arrowToolOptionsPenDashStyle}")
+    protected Integer arrowToolOptionsPenDashStyle;
+    /**
+     * The Arrow tool options brush color.
+     */
+    @Value("${groupdocs.annotation.arrowToolOptionsBrushColor}")
+    protected String  arrowToolOptionsBrushColor;
+    @Value("${groupdocs.annotation.distanceToolOptionsPenColor}")
+    private String    distanceToolOptionsPenColor;
+    /**
+     * The Pen color.
+     */
+    @Value("${groupdocs.annotation.penColor}")
+    protected String  penColor;
+    /**
+     * The Pen width.
+     */
+    @Value("${groupdocs.annotation.penWidth}")
+    protected Integer penWidth;
+    /**
+     * The Pen style.
+     */
+    @Value("${groupdocs.annotation.penStyle}")
+    protected Integer penStyle;
+    /**
+     * The Enabled tools.
+     */
+    @Value("${groupdocs.annotation.enabledTools}")
+    protected Integer enabledTools;
+    /**
+     * The Connector position.
+     */
+    @Value("${groupdocs.annotation.connectorPosition}")
+    protected Integer connectorPosition;
+    /**
+     * The Save reply on focus loss.
+     */
+    @Value("${groupdocs.annotation.saveReplyOnFocusLoss}")
+    protected Boolean saveReplyOnFocusLoss;
+    /**
+     * The Clickable annotations.
+     */
+    @Value("${groupdocs.annotation.clickableAnnotations}")
+    protected Boolean clickableAnnotations;
+    /**
+     * The Disconnect uncommented.
+     */
+    @Value("${groupdocs.annotation.disconnectUncommented}")
+    protected Boolean disconnectUncommented;
+    /**
+     * The Strikeout mode.
+     */
+    @Value("${groupdocs.annotation.strikeoutMode}")
+    protected Integer strikeoutMode;
+    /**
+     * The Any tool selection.
+     */
+    @Value("${groupdocs.annotation.anyToolSelection}")
+    protected Boolean anyToolSelection;
+    /**
+     * The Sidebar container selector.
+     */
+    @Value("${groupdocs.annotation.sidebarContainerSelector}")
+    protected String  sidebarContainerSelector;
+    /**
+     * The Use page number in url hash.
+     */
+    @Value("${groupdocs.annotation.usePageNumberInUrlHash}")
+    protected Boolean usePageNumberInUrlHash;
+    /**
+     * The Text selection synchronous calculation.
+     */
+    @Value("${groupdocs.annotation.textSelectionSynchronousCalculation}")
+    protected Boolean textSelectionSynchronousCalculation;
+    /**
+     * The Variable height page support.
+     */
+    @Value("${groupdocs.annotation.variableHeightPageSupport}")
+    protected Boolean variableHeightPageSupport;
+    /**
+     * The Create markup.
+     */
+    @Value("${groupdocs.annotation.createMarkup}")
+    protected Boolean createMarkup;
+    /**
+     * The Use pdf.
+     */
+    @Value("${groupdocs.annotation.use_pdf}")
+    protected Boolean usePdf;
+    /**
+     * The Mode.
+     */
+    @Value("${groupdocs.annotation.mode}")
+    protected String  mode;
+    /**
+     * The Selection container selector.
+     */
+    @Value("${groupdocs.annotation.selectionContainerSelector}")
+    protected String  selectionContainerSelector;
+    /**
+     * The Graphics container selector.
+     */
+    @Value("${groupdocs.annotation.graphicsContainerSelector}")
+    protected String  graphicsContainerSelector;
+    /**
+     * The Use browser cache.
+     */
+    @Value("${groupdocs.annotation.useBrowserCache}")
+    protected Boolean useBrowserCache;
+    /**
+     * The Widget id.
+     */
+    @Value("${groupdocs.annotation.widgetId}")
+    protected String  widgetId;
+    /**
+     * The Right panel enabled.
+     */
+    @Value("${groupdocs.annotation.rightPanelEnabled}")
+    protected Boolean rightPanelEnabled;
+    /**
+     * The Max cache size.
+     */
+    @Value("${groupdocs.annotation.maxCacheSize}")
+    protected Long    maxCacheSize;
+    /**
+     * The Upload path.
+     */
+    @Value("${groupdocs.annotation.uploadPath}")
+    protected String  uploadPath;
+    /**
+     * The Undo enabled.
+     */
+    @Value("${groupdocs.annotation.undoEnabled}")
+    protected Boolean undoEnabled;
+    /**
+     * The Jquery file download cookie name.
+     */
+    @Value("${groupdocs.annotation.jqueryFileDownloadCookieName}")
+    protected String  jqueryFileDownloadCookieName;
+    /**
+     * The Watermark font size.
+     */
+    @Value("${groupdocs.annotation.watermarkFontSize}")
+    protected Integer watermarkFontSize;
+    /**
+     * The Watermark position.
+     */
+    @Value("${groupdocs.annotation.watermarkPosition}")
+    protected String  watermarkPosition;
+    /**
+     * The Watermark text.
+     */
+    @Value("${groupdocs.annotation.watermarkText}")
+    protected String  watermarkText;
+    /**
+     * The Convert word documents completely.
+     */
+    @Value("${groupdocs.annotation.convertWordDocumentsCompletely}")
+    protected Boolean convertWordDocumentsCompletely;
+    /**
+     * The Ignore document absence.
+     */
+    @Value("${groupdocs.annotation.ignoreDocumentAbsence}")
+    protected Boolean ignoreDocumentAbsence;
+    /**
+     * The Preload pages on browser side.
+     */
+    @Value("${groupdocs.annotation.preloadPagesOnBrowserSide}")
+    protected Boolean preloadPagesOnBrowserSide;
+    /**
+     * The Print with watermark.
+     */
+    @Value("${groupdocs.annotation.printWithWatermark}")
+    protected Boolean printWithWatermark;
+    /**
+     * The Support page rotation.
+     */
+    @Value("${groupdocs.annotation.supportPageRotation}")
+    protected Boolean supportPageRotation;
+    /**
+     * The Store logic.
+     */
+    @Value("${groupdocs.annotation.storeLogic}")
+    protected String  storeLogic;
+    /**
+     * The Print annotations.
+     */
+    @Value("${groupdocs.annotation.printAnnotations}")
+    protected Boolean printAnnotations;
+    /**
+     * The Localization.
+     */
+    @Value("${groupdocs.annotation.localization}")
+    protected String  localization;
+    /**
+     * The Disable atmosphere.
+     */
+    @Value("${groupdocs.annotation.disableAtmosphere}")
+    protected Boolean disableAtmosphere;
+    /**
+     * The File display name.
+     */
+    @Value("${groupdocs.annotation.fileDisplayName}")
+    protected String  fileDisplayName;
+    /**
+     * The Is case sensitive.
+     */
+    @Value("${groupdocs.annotation.isCaseSensitive}")
+    protected Boolean caseSensitive;
+    /**
+     * The Search for separate words.
+     */
+    @Value("${groupdocs.annotation.searchForSeparateWords}")
+    protected Boolean searchForSeparateWords;
+    @Value("${groupdocs.annotation.defaultFileName}")
+    private String    defaultFileName;
+
+    @Value("${groupdocs.annotation.encoding}")
+    private String    encoding;
+
+    @Value("${groupdocs.annotation.fontsPath}")
+    private String    fontsPath;
+
+    @Value("${groupdocs.annotation.pdfPrintMarginsEnabled}")
+    private Boolean   pdfPrintMarginsEnabled;
+
+    @Value("${groupdocs.annotation.customDocumentCss}")
+    private String    customDocumentCss;
+
+    @Value("${groupdocs.annotation.useVirtualScrolling}")
+    private Boolean   useVirtualScrolling;
+
+    @Value("${groupdocs.annotation.showHiddenSlides}")
+    private Boolean   showHiddenSlides;
+
+    @Value("${groupdocs.annotation.imageResolution}")
+    private Integer   imageResolution;
+
+    @Value("${groupdocs.annotation.imageWebRequestTimeout}")
+    private Integer   imageWebRequestTimeout;
+
+    @Value("${groupdocs.annotation.typewriterImportEnabled}")
+    private Boolean   typewriterImportEnabled;
+
+    /**
+     * Gets license path.
      *
-     * @return Value for property 'storageType'.
+     * @return the license path
+     */
+    @Override
+    public String getLicensePath() {
+        return licensePath;
+    }
+
+    /**
+     * Sets license path.
+     *
+     * @param licensePath the license path
+     */
+
+    public void setLicensePath(String licensePath) {
+        this.licensePath = licensePath;
+    }
+
+    /**
+     * Gets application path.
+     *
+     * @return the application path
+     */
+    @Override
+    public String getApplicationPath() {
+        return "null".equalsIgnoreCase(applicationPath) ? null : applicationPath;
+    }
+
+    /**
+     * Sets application path.
+     *
+     * @param applicationPath the application path
+     */
+
+    public void setApplicationPath(String applicationPath) {
+        this.applicationPath = applicationPath;
+    }
+
+    /**
+     * Gets storage type.
+     *
+     * @return the storage type
      */
     public String getStorageType() {
         return storageType;
     }
 
     /**
-     * Setter for property 'storageType'.
+     * Sets storage type.
      *
-     * @param storageType Value to set for property 'storageType'.
+     * @param storageType the storage type
      */
+
     public void setStorageType(String storageType) {
         this.storageType = storageType;
     }
 
     /**
-     * Getter for property 'dbServer'.
+     * Gets db server.
      *
-     * @return Value for property 'dbServer'.
+     * @return the db server
      */
     public String getDbServer() {
         return dbServer;
     }
 
     /**
-     * Setter for property 'dbServer'.
+     * Sets db server.
      *
-     * @param dbServer Value to set for property 'dbServer'.
+     * @param dbServer the db server
      */
+
     public void setDbServer(String dbServer) {
         this.dbServer = dbServer;
     }
 
     /**
-     * Getter for property 'dbPort'.
+     * Gets db port.
      *
-     * @return Value for property 'dbPort'.
+     * @return the db port
      */
     public Integer getDbPort() {
         return dbPort;
     }
 
     /**
-     * Setter for property 'dbPort'.
+     * Sets db port.
      *
-     * @param dbPort Value to set for property 'dbPort'.
+     * @param dbPort the db port
      */
+
     public void setDbPort(Integer dbPort) {
         this.dbPort = dbPort;
     }
 
     /**
-     * Getter for property 'dbName'.
+     * Gets db name.
      *
-     * @return Value for property 'dbName'.
+     * @return the db name
      */
     public String getDbName() {
         return dbName;
     }
 
     /**
-     * Setter for property 'dbName'.
+     * Sets db name.
      *
-     * @param dbName Value to set for property 'dbName'.
+     * @param dbName the db name
      */
+
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
 
     /**
-     * Getter for property 'dbUsername'.
+     * Gets db username.
      *
-     * @return Value for property 'dbUsername'.
+     * @return the db username
      */
     public String getDbUsername() {
         return dbUsername;
     }
 
     /**
-     * Setter for property 'dbUsername'.
+     * Sets db username.
      *
-     * @param dbUsername Value to set for property 'dbUsername'.
+     * @param dbUsername the db username
      */
+
     public void setDbUsername(String dbUsername) {
         this.dbUsername = dbUsername;
     }
 
     /**
-     * Getter for property 'dbPassword'.
+     * Gets db password.
      *
-     * @return Value for property 'dbPassword'.
+     * @return the db password
      */
     public String getDbPassword() {
         return dbPassword;
     }
 
     /**
-     * Setter for property 'dbPassword'.
+     * Sets db password.
      *
-     * @param dbPassword Value to set for property 'dbPassword'.
+     * @param dbPassword the db password
      */
+
     public void setDbPassword(String dbPassword) {
         this.dbPassword = dbPassword;
     }
 
     /**
-     * Getter for property 'storagePath'.
+     * Gets storage path.
      *
-     * @return Value for property 'storagePath'.
+     * @return the storage path
      */
     public String getStoragePath() {
         return "null".equals(storagePath) ? null : storagePath;
     }
 
     /**
-     * Setter for property 'storagePath'.
+     * Sets storage path.
      *
-     * @param storagePath Value to set for property 'storagePath'.
+     * @param storagePath the storage path
      */
+
     public void setStoragePath(String storagePath) {
         this.storagePath = storagePath;
     }
 
     /**
-     * Getter for property 'useAuthorization'.
+     * Is use authorization boolean.
      *
-     * @return Value for property 'useAuthorization'.
+     * @return the boolean
      */
+
     public Boolean isUseAuthorization() {
         return useAuthorization;
     }
 
     /**
-     * Setter for property 'useAuthorization'.
+     * Sets use authorization.
      *
-     * @param useAuthorization Value to set for property 'useAuthorization'.
+     * @param useAuthorization the use authorization
      */
 
     public void setUseAuthorization(Boolean useAuthorization) {
@@ -732,9 +774,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'useCache'.
+     * Is use cache boolean.
      *
-     * @return Value for property 'useCache'.
+     * @return the boolean
      */
     @Override
     public Boolean isUseCache() {
@@ -742,9 +784,49 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'useCache'.
+     * Gets encoding.
      *
-     * @param useCache Value to set for property 'useCache'.
+     * @return the encoding
+     */
+    @Override
+    public String getEncoding() {
+        return encoding;
+    }
+
+    /**
+     * Sets encoding.
+     *
+     * @param encoding the encoding
+     */
+
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
+    /**
+     * Gets fonts path.
+     *
+     * @return the fonts path
+     */
+    @Override
+    public String getFontsPath() {
+        return fontsPath;
+    }
+
+    /**
+     * Sets fonts path.
+     *
+     * @param fontsPath the fonts path
+     */
+
+    public void setFontsPath(String fontsPath) {
+        this.fontsPath = fontsPath;
+    }
+
+    /**
+     * Sets use cache.
+     *
+     * @param useCache the use cache
      */
 
     public void setUseCache(Boolean useCache) {
@@ -752,7 +834,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets expiration date.
+     *
+     * @return the expiration date
      */
     @Override
     public Integer getExpirationDate() {
@@ -760,9 +844,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'expirationDate'.
+     * Sets expiration date.
      *
-     * @param expirationDate Value to set for property 'expirationDate'.
+     * @param expirationDate the expiration date
      */
 
     public void setExpirationDate(Integer expirationDate) {
@@ -770,7 +854,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets encryption key.
+     *
+     * @return the encryption key
      */
     @Override
     public String getEncryptionKey() {
@@ -778,9 +864,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'encryptionKey'.
+     * Sets encryption key.
      *
-     * @param encryptionKey Value to set for property 'encryptionKey'.
+     * @param encryptionKey the encryption key
      */
 
     public void setEncryptionKey(String encryptionKey) {
@@ -788,7 +874,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets locales path.
+     *
+     * @return the locales path
      */
     @Override
     public String getLocalesPath() {
@@ -796,9 +884,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'localesPath'.
+     * Sets locales path.
      *
-     * @param localesPath Value to set for property 'localesPath'.
+     * @param localesPath the locales path
      */
 
     public void setLocalesPath(String localesPath) {
@@ -806,7 +894,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets quality.
+     *
+     * @return the quality
      */
     @Override
     public Integer getQuality() {
@@ -814,9 +904,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'quality'.
+     * Sets quality.
      *
-     * @param quality Value to set for property 'quality'.
+     * @param quality the quality
      */
 
     public void setQuality(Integer quality) {
@@ -824,9 +914,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showThumbnails'.
+     * Is show thumbnails boolean.
      *
-     * @return Value for property 'showThumbnails'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowThumbnails() {
@@ -834,9 +924,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showThumbnails'.
+     * Sets show thumbnails.
      *
-     * @param showThumbnails Value to set for property 'showThumbnails'.
+     * @param showThumbnails the show thumbnails
      */
 
     public void setShowThumbnails(Boolean showThumbnails) {
@@ -844,9 +934,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'openThumbnails'.
+     * Is open thumbnails boolean.
      *
-     * @return Value for property 'openThumbnails'.
+     * @return the boolean
      */
     @Override
     public Boolean isOpenThumbnails() {
@@ -854,9 +944,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'openThumbnails'.
+     * Sets open thumbnails.
      *
-     * @param openThumbnails Value to set for property 'openThumbnails'.
+     * @param openThumbnails the open thumbnails
      */
 
     public void setOpenThumbnails(Boolean openThumbnails) {
@@ -864,7 +954,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets initial zoom.
+     *
+     * @return the initial zoom
      */
     @Override
     public Integer getInitialZoom() {
@@ -872,9 +964,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'initialZoom'.
+     * Sets initial zoom.
      *
-     * @param initialZoom Value to set for property 'initialZoom'.
+     * @param initialZoom the initial zoom
      */
 
     public void setInitialZoom(Integer initialZoom) {
@@ -882,9 +974,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'zoomToFitWidth'.
+     * Is zoom to fit width boolean.
      *
-     * @return Value for property 'zoomToFitWidth'.
+     * @return the boolean
      */
     @Override
     public Boolean isZoomToFitWidth() {
@@ -892,9 +984,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'zoomToFitWidth'.
+     * Sets zoom to fit width.
      *
-     * @param zoomToFitWidth Value to set for property 'zoomToFitWidth'.
+     * @param zoomToFitWidth the zoom to fit width
      */
 
     public void setZoomToFitWidth(Boolean zoomToFitWidth) {
@@ -902,9 +994,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'zoomToFitHeight'.
+     * Is zoom to fit height boolean.
      *
-     * @return Value for property 'zoomToFitHeight'.
+     * @return the boolean
      */
     @Override
     public Boolean isZoomToFitHeight() {
@@ -912,9 +1004,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'zoomToFitHeight'.
+     * Sets zoom to fit height.
      *
-     * @param zoomToFitHeight Value to set for property 'zoomToFitHeight'.
+     * @param zoomToFitHeight the zoom to fit height
      */
 
     public void setZoomToFitHeight(Boolean zoomToFitHeight) {
@@ -922,7 +1014,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets width.
+     *
+     * @return the width
      */
     @Override
     public Integer getWidth() {
@@ -930,9 +1024,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'width'.
+     * Sets width.
      *
-     * @param width Value to set for property 'width'.
+     * @param width the width
      */
 
     public void setWidth(Integer width) {
@@ -940,7 +1034,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets height.
+     *
+     * @return the height
      */
     @Override
     public Integer getHeight() {
@@ -948,9 +1044,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'height'.
+     * Sets height.
      *
-     * @param height Value to set for property 'height'.
+     * @param height the height
      */
 
     public void setHeight(Integer height) {
@@ -958,9 +1054,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showPrint'.
+     * Is show print boolean.
      *
-     * @return Value for property 'showPrint'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowPrint() {
@@ -968,9 +1064,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showPrint'.
+     * Sets show print.
      *
-     * @param showPrint Value to set for property 'showPrint'.
+     * @param showPrint the show print
      */
 
     public void setShowPrint(Boolean showPrint) {
@@ -978,9 +1074,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showZoom'.
+     * Is show zoom boolean.
      *
-     * @return Value for property 'showZoom'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowZoom() {
@@ -988,9 +1084,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showZoom'.
+     * Sets show zoom.
      *
-     * @param showZoom Value to set for property 'showZoom'.
+     * @param showZoom the show zoom
      */
 
     public void setShowZoom(Boolean showZoom) {
@@ -998,9 +1094,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showPaging'.
+     * Is show paging boolean.
      *
-     * @return Value for property 'showPaging'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowPaging() {
@@ -1008,9 +1104,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showPaging'.
+     * Sets show paging.
      *
-     * @param showPaging Value to set for property 'showPaging'.
+     * @param showPaging the show paging
      */
 
     public void setShowPaging(Boolean showPaging) {
@@ -1018,7 +1114,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets preload pages count.
+     *
+     * @return the preload pages count
      */
     @Override
     public Integer getPreloadPagesCount() {
@@ -1026,9 +1124,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'preloadPagesCount'.
+     * Sets preload pages count.
      *
-     * @param preloadPagesCount Value to set for property 'preloadPagesCount'.
+     * @param preloadPagesCount the preload pages count
      */
 
     public void setPreloadPagesCount(Integer preloadPagesCount) {
@@ -1036,9 +1134,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showHeader'.
+     * Is show header boolean.
      *
-     * @return Value for property 'showHeader'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowHeader() {
@@ -1046,9 +1144,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showHeader'.
+     * Sets show header.
      *
-     * @param showHeader Value to set for property 'showHeader'.
+     * @param showHeader the show header
      */
 
     public void setShowHeader(Boolean showHeader) {
@@ -1056,9 +1154,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showFileExplorer'.
+     * Is show file explorer boolean.
      *
-     * @return Value for property 'showFileExplorer'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowFileExplorer() {
@@ -1066,9 +1164,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showFileExplorer'.
+     * Sets show file explorer.
      *
-     * @param showFileExplorer Value to set for property 'showFileExplorer'.
+     * @param showFileExplorer the show file explorer
      */
 
     public void setShowFileExplorer(Boolean showFileExplorer) {
@@ -1076,9 +1174,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'useEmScaling'.
+     * Is use em scaling boolean.
      *
-     * @return Value for property 'useEmScaling'.
+     * @return the boolean
      */
     @Override
     public Boolean isUseEmScaling() {
@@ -1086,9 +1184,29 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'useEmScaling'.
+     * Is pdf print margins enabled boolean.
      *
-     * @param useEmScaling Value to set for property 'useEmScaling'.
+     * @return the boolean
+     */
+    @Override
+    public Boolean isPdfPrintMarginsEnabled() {
+        return pdfPrintMarginsEnabled;
+    }
+
+    /**
+     * Sets pdf print margins enabled.
+     *
+     * @param pdfPrintMarginsEnabled the pdf print margins enabled
+     */
+
+    public void setPdfPrintMarginsEnabled(Boolean pdfPrintMarginsEnabled) {
+        this.pdfPrintMarginsEnabled = pdfPrintMarginsEnabled;
+    }
+
+    /**
+     * Sets use em scaling.
+     *
+     * @param useEmScaling the use em scaling
      */
 
     public void setUseEmScaling(Boolean useEmScaling) {
@@ -1096,9 +1214,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'enableRightClickMenu'.
+     * Is enable right click menu boolean.
      *
-     * @return Value for property 'enableRightClickMenu'.
+     * @return the boolean
      */
     @Override
     public Boolean isEnableRightClickMenu() {
@@ -1106,9 +1224,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'enableRightClickMenu'.
+     * Sets enable right click menu.
      *
-     * @param enableRightClickMenu Value to set for property 'enableRightClickMenu'.
+     * @param enableRightClickMenu the enable right click menu
      */
 
     public void setEnableRightClickMenu(Boolean enableRightClickMenu) {
@@ -1116,9 +1234,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'showToolbar'.
+     * Is show toolbar boolean.
      *
-     * @return Value for property 'showToolbar'.
+     * @return the boolean
      */
     @Override
     public Boolean isShowToolbar() {
@@ -1126,9 +1244,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'showToolbar'.
+     * Sets show toolbar.
      *
-     * @param showToolbar Value to set for property 'showToolbar'.
+     * @param showToolbar the show toolbar
      */
 
     public void setShowToolbar(Boolean showToolbar) {
@@ -1136,9 +1254,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'enableSidePanel'.
+     * Is enable side panel boolean.
      *
-     * @return Value for property 'enableSidePanel'.
+     * @return the boolean
      */
     @Override
     public Boolean isEnableSidePanel() {
@@ -1146,9 +1264,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'enableSidePanel'.
+     * Sets enable side panel.
      *
-     * @param enableSidePanel Value to set for property 'enableSidePanel'.
+     * @param enableSidePanel the enable side panel
      */
 
     public void setEnableSidePanel(Boolean enableSidePanel) {
@@ -1156,9 +1274,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'scrollOnFocus'.
+     * Is scroll on focus boolean.
      *
-     * @return Value for property 'scrollOnFocus'.
+     * @return the boolean
      */
     @Override
     public Boolean isScrollOnFocus() {
@@ -1166,9 +1284,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'scrollOnFocus'.
+     * Sets scroll on focus.
      *
-     * @param scrollOnFocus Value to set for property 'scrollOnFocus'.
+     * @param scrollOnFocus the scroll on focus
      */
 
     public void setScrollOnFocus(Boolean scrollOnFocus) {
@@ -1176,7 +1294,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets strike out color.
+     *
+     * @return the strike out color
      */
     @Override
     public String getStrikeOutColor() {
@@ -1184,9 +1304,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'strikeOutColor'.
+     * Sets strike out color.
      *
-     * @param strikeOutColor Value to set for property 'strikeOutColor'.
+     * @param strikeOutColor the strike out color
      */
 
     public void setStrikeOutColor(String strikeOutColor) {
@@ -1194,7 +1314,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets highlight color.
+     *
+     * @return the highlight color
      */
     @Override
     public String getHighlightColor() {
@@ -1202,9 +1324,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'highlightColor'.
+     * Sets highlight color.
      *
-     * @param highlightColor Value to set for property 'highlightColor'.
+     * @param highlightColor the highlight color
      */
 
     public void setHighlightColor(String highlightColor) {
@@ -1212,7 +1334,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets underline color.
+     *
+     * @return the underline color
      */
     @Override
     public String getUnderlineColor() {
@@ -1220,9 +1344,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'underlineColor'.
+     * Sets underline color.
      *
-     * @param underlineColor Value to set for property 'underlineColor'.
+     * @param underlineColor the underline color
      */
 
     public void setUnderlineColor(String underlineColor) {
@@ -1230,7 +1354,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets text field background color.
+     *
+     * @return the text field background color
      */
     @Override
     public String getTextFieldBackgroundColor() {
@@ -1238,9 +1364,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'textFieldBackgroundColor'.
+     * Sets text field background color.
      *
-     * @param textFieldBackgroundColor Value to set for property 'textFieldBackgroundColor'.
+     * @param textFieldBackgroundColor the text field background color
      */
 
     public void setTextFieldBackgroundColor(String textFieldBackgroundColor) {
@@ -1248,9 +1374,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'tabNavigationEnabled'.
+     * Is tab navigation enabled boolean.
      *
-     * @return Value for property 'tabNavigationEnabled'.
+     * @return the boolean
      */
     @Override
     public Boolean isTabNavigationEnabled() {
@@ -1258,9 +1384,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'tabNavigationEnabled'.
+     * Sets tab navigation enabled.
      *
-     * @param tabNavigationEnabled Value to set for property 'tabNavigationEnabled'.
+     * @param tabNavigationEnabled the tab navigation enabled
      */
 
     public void setTabNavigationEnabled(Boolean tabNavigationEnabled) {
@@ -1268,7 +1394,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets minimum image width.
+     *
+     * @return the minimum image width
      */
     @Override
     public Integer getMinimumImageWidth() {
@@ -1276,9 +1404,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'minimumImageWidth'.
+     * Sets minimum image width.
      *
-     * @param minimumImageWidth Value to set for property 'minimumImageWidth'.
+     * @param minimumImageWidth the minimum image width
      */
 
     public void setMinimumImageWidth(Integer minimumImageWidth) {
@@ -1286,7 +1414,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets area tool options pen width.
+     *
+     * @return the area tool options pen width
      */
     @Override
     public Integer getAreaToolOptionsPenWidth() {
@@ -1294,9 +1424,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'areaToolOptionsPenWidth'.
+     * Sets area tool options pen width.
      *
-     * @param areaToolOptionsPenWidth Value to set for property 'areaToolOptionsPenWidth'.
+     * @param areaToolOptionsPenWidth the area tool options pen width
      */
 
     public void setAreaToolOptionsPenWidth(Integer areaToolOptionsPenWidth) {
@@ -1304,7 +1434,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets area tool options pen color.
+     *
+     * @return the area tool options pen color
      */
     @Override
     public String getAreaToolOptionsPenColor() {
@@ -1312,9 +1444,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'areaToolOptionsPenColor'.
+     * Sets area tool options pen color.
      *
-     * @param areaToolOptionsPenColor Value to set for property 'areaToolOptionsPenColor'.
+     * @param areaToolOptionsPenColor the area tool options pen color
      */
 
     public void setAreaToolOptionsPenColor(String areaToolOptionsPenColor) {
@@ -1322,7 +1454,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets area tool options pen dash style.
+     *
+     * @return the area tool options pen dash style
      */
     @Override
     public Integer getAreaToolOptionsPenDashStyle() {
@@ -1330,9 +1464,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'areaToolOptionsPenDashStyle'.
+     * Sets area tool options pen dash style.
      *
-     * @param areaToolOptionsPenDashStyle Value to set for property 'areaToolOptionsPenDashStyle'.
+     * @param areaToolOptionsPenDashStyle the area tool options pen dash style
      */
 
     public void setAreaToolOptionsPenDashStyle(Integer areaToolOptionsPenDashStyle) {
@@ -1340,7 +1474,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets area tool options brush color.
+     *
+     * @return the area tool options brush color
      */
     @Override
     public String getAreaToolOptionsBrushColor() {
@@ -1348,9 +1484,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'areaToolOptionsBrushColor'.
+     * Sets area tool options brush color.
      *
-     * @param areaToolOptionsBrushColor Value to set for property 'areaToolOptionsBrushColor'.
+     * @param areaToolOptionsBrushColor the area tool options brush color
      */
 
     public void setAreaToolOptionsBrushColor(String areaToolOptionsBrushColor) {
@@ -1358,7 +1494,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets polyline tool options pen width.
+     *
+     * @return the polyline tool options pen width
      */
     @Override
     public Integer getPolylineToolOptionsPenWidth() {
@@ -1366,9 +1504,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'polylineToolOptionsPenWidth'.
+     * Sets polyline tool options pen width.
      *
-     * @param polylineToolOptionsPenWidth Value to set for property 'polylineToolOptionsPenWidth'.
+     * @param polylineToolOptionsPenWidth the polyline tool options pen width
      */
 
     public void setPolylineToolOptionsPenWidth(Integer polylineToolOptionsPenWidth) {
@@ -1376,7 +1514,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets polyline tool options pen color.
+     *
+     * @return the polyline tool options pen color
      */
     @Override
     public String getPolylineToolOptionsPenColor() {
@@ -1384,9 +1524,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'polylineToolOptionsPenColor'.
+     * Sets polyline tool options pen color.
      *
-     * @param polylineToolOptionsPenColor Value to set for property 'polylineToolOptionsPenColor'.
+     * @param polylineToolOptionsPenColor the polyline tool options pen color
      */
 
     public void setPolylineToolOptionsPenColor(String polylineToolOptionsPenColor) {
@@ -1394,7 +1534,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets polyline tool options pen dash style.
+     *
+     * @return the polyline tool options pen dash style
      */
     @Override
     public Integer getPolylineToolOptionsPenDashStyle() {
@@ -1402,9 +1544,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'polylineToolOptionsPenDashStyle'.
+     * Sets polyline tool options pen dash style.
      *
-     * @param polylineToolOptionsPenDashStyle Value to set for property 'polylineToolOptionsPenDashStyle'.
+     * @param polylineToolOptionsPenDashStyle the polyline tool options pen dash style
      */
 
     public void setPolylineToolOptionsPenDashStyle(Integer polylineToolOptionsPenDashStyle) {
@@ -1412,7 +1554,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets polyline tool options brush color.
+     *
+     * @return the polyline tool options brush color
      */
     @Override
     public String getPolylineToolOptionsBrushColor() {
@@ -1420,9 +1564,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'polylineToolOptionsBrushColor'.
+     * Sets polyline tool options brush color.
      *
-     * @param polylineToolOptionsBrushColor Value to set for property 'polylineToolOptionsBrushColor'.
+     * @param polylineToolOptionsBrushColor the polyline tool options brush color
      */
 
     public void setPolylineToolOptionsBrushColor(String polylineToolOptionsBrushColor) {
@@ -1430,7 +1574,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets arrow tool options pen width.
+     *
+     * @return the arrow tool options pen width
      */
     @Override
     public Integer getArrowToolOptionsPenWidth() {
@@ -1438,9 +1584,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'arrowToolOptionsPenWidth'.
+     * Sets arrow tool options pen width.
      *
-     * @param arrowToolOptionsPenWidth Value to set for property 'arrowToolOptionsPenWidth'.
+     * @param arrowToolOptionsPenWidth the arrow tool options pen width
      */
 
     public void setArrowToolOptionsPenWidth(Integer arrowToolOptionsPenWidth) {
@@ -1448,7 +1594,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets arrow tool options pen color.
+     *
+     * @return the arrow tool options pen color
      */
     @Override
     public String getArrowToolOptionsPenColor() {
@@ -1456,9 +1604,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'arrowToolOptionsPenColor'.
+     * Sets arrow tool options pen color.
      *
-     * @param arrowToolOptionsPenColor Value to set for property 'arrowToolOptionsPenColor'.
+     * @param arrowToolOptionsPenColor the arrow tool options pen color
      */
 
     public void setArrowToolOptionsPenColor(String arrowToolOptionsPenColor) {
@@ -1466,7 +1614,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets arrow tool options pen dash style.
+     *
+     * @return the arrow tool options pen dash style
      */
     @Override
     public Integer getArrowToolOptionsPenDashStyle() {
@@ -1474,9 +1624,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'arrowToolOptionsPenDashStyle'.
+     * Sets arrow tool options pen dash style.
      *
-     * @param arrowToolOptionsPenDashStyle Value to set for property 'arrowToolOptionsPenDashStyle'.
+     * @param arrowToolOptionsPenDashStyle the arrow tool options pen dash style
      */
 
     public void setArrowToolOptionsPenDashStyle(Integer arrowToolOptionsPenDashStyle) {
@@ -1484,7 +1634,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets arrow tool options brush color.
+     *
+     * @return the arrow tool options brush color
      */
     @Override
     public String getArrowToolOptionsBrushColor() {
@@ -1492,7 +1644,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets distance tool options pen color.
+     *
+     * @return the distance tool options pen color
      */
     @Override
     public String getDistanceToolOptionsPenColor() {
@@ -1510,9 +1664,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'arrowToolOptionsBrushColor'.
+     * Sets arrow tool options brush color.
      *
-     * @param arrowToolOptionsBrushColor Value to set for property 'arrowToolOptionsBrushColor'.
+     * @param arrowToolOptionsBrushColor the arrow tool options brush color
      */
 
     public void setArrowToolOptionsBrushColor(String arrowToolOptionsBrushColor) {
@@ -1520,7 +1674,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets pen color.
+     *
+     * @return the pen color
      */
     @Override
     public String getPenColor() {
@@ -1528,9 +1684,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'penColor'.
+     * Sets pen color.
      *
-     * @param penColor Value to set for property 'penColor'.
+     * @param penColor the pen color
      */
 
     public void setPenColor(String penColor) {
@@ -1538,7 +1694,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets pen width.
+     *
+     * @return the pen width
      */
     @Override
     public Integer getPenWidth() {
@@ -1546,9 +1704,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'penWidth'.
+     * Sets pen width.
      *
-     * @param penWidth Value to set for property 'penWidth'.
+     * @param penWidth the pen width
      */
 
     public void setPenWidth(Integer penWidth) {
@@ -1556,7 +1714,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets pen style.
+     *
+     * @return the pen style
      */
     @Override
     public Integer getPenStyle() {
@@ -1564,9 +1724,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'penStyle'.
+     * Sets pen style.
      *
-     * @param penStyle Value to set for property 'penStyle'.
+     * @param penStyle the pen style
      */
 
     public void setPenStyle(Integer penStyle) {
@@ -1574,7 +1734,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets enabled tools.
+     *
+     * @return the enabled tools
      */
     @Override
     public Integer getEnabledTools() {
@@ -1582,9 +1744,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'enabledTools'.
+     * Sets enabled tools.
      *
-     * @param enabledTools Value to set for property 'enabledTools'.
+     * @param enabledTools the enabled tools
      */
 
     public void setEnabledTools(Integer enabledTools) {
@@ -1592,7 +1754,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets connector position.
+     *
+     * @return the connector position
      */
     @Override
     public Integer getConnectorPosition() {
@@ -1600,9 +1764,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'connectorPosition'.
+     * Sets connector position.
      *
-     * @param connectorPosition Value to set for property 'connectorPosition'.
+     * @param connectorPosition the connector position
      */
 
     public void setConnectorPosition(Integer connectorPosition) {
@@ -1610,9 +1774,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'saveReplyOnFocusLoss'.
+     * Is save reply on focus loss boolean.
      *
-     * @return Value for property 'saveReplyOnFocusLoss'.
+     * @return the boolean
      */
     @Override
     public Boolean isSaveReplyOnFocusLoss() {
@@ -1620,9 +1784,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'saveReplyOnFocusLoss'.
+     * Sets save reply on focus loss.
      *
-     * @param saveReplyOnFocusLoss Value to set for property 'saveReplyOnFocusLoss'.
+     * @param saveReplyOnFocusLoss the save reply on focus loss
      */
 
     public void setSaveReplyOnFocusLoss(Boolean saveReplyOnFocusLoss) {
@@ -1630,9 +1794,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'clickableAnnotations'.
+     * Is clickable annotations boolean.
      *
-     * @return Value for property 'clickableAnnotations'.
+     * @return the boolean
      */
     @Override
     public Boolean isClickableAnnotations() {
@@ -1640,9 +1804,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'clickableAnnotations'.
+     * Sets clickable annotations.
      *
-     * @param clickableAnnotations Value to set for property 'clickableAnnotations'.
+     * @param clickableAnnotations the clickable annotations
      */
 
     public void setClickableAnnotations(Boolean clickableAnnotations) {
@@ -1650,9 +1814,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'disconnectUncommented'.
+     * Is disconnect uncommented boolean.
      *
-     * @return Value for property 'disconnectUncommented'.
+     * @return the boolean
      */
     @Override
     public Boolean isDisconnectUncommented() {
@@ -1660,9 +1824,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'disconnectUncommented'.
+     * Sets disconnect uncommented.
      *
-     * @param disconnectUncommented Value to set for property 'disconnectUncommented'.
+     * @param disconnectUncommented the disconnect uncommented
      */
 
     public void setDisconnectUncommented(Boolean disconnectUncommented) {
@@ -1670,7 +1834,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets strikeout mode.
+     *
+     * @return the strikeout mode
      */
     @Override
     public Integer getStrikeoutMode() {
@@ -1678,9 +1844,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'strikeoutMode'.
+     * Sets strikeout mode.
      *
-     * @param strikeoutMode Value to set for property 'strikeoutMode'.
+     * @param strikeoutMode the strikeout mode
      */
 
     public void setStrikeoutMode(Integer strikeoutMode) {
@@ -1688,9 +1854,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'anyToolSelection'.
+     * Is any tool selection boolean.
      *
-     * @return Value for property 'anyToolSelection'.
+     * @return the boolean
      */
     @Override
     public Boolean isAnyToolSelection() {
@@ -1698,9 +1864,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'anyToolSelection'.
+     * Sets any tool selection.
      *
-     * @param anyToolSelection Value to set for property 'anyToolSelection'.
+     * @param anyToolSelection the any tool selection
      */
 
     public void setAnyToolSelection(Boolean anyToolSelection) {
@@ -1708,7 +1874,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets sidebar container selector.
+     *
+     * @return the sidebar container selector
      */
     @Override
     public String getSidebarContainerSelector() {
@@ -1716,9 +1884,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'sidebarContainerSelector'.
+     * Sets sidebar container selector.
      *
-     * @param sidebarContainerSelector Value to set for property 'sidebarContainerSelector'.
+     * @param sidebarContainerSelector the sidebar container selector
      */
 
     public void setSidebarContainerSelector(String sidebarContainerSelector) {
@@ -1726,9 +1894,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'usePageNumberInUrlHash'.
+     * Is use page number in url hash boolean.
      *
-     * @return Value for property 'usePageNumberInUrlHash'.
+     * @return the boolean
      */
     @Override
     public Boolean isUsePageNumberInUrlHash() {
@@ -1736,9 +1904,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'usePageNumberInUrlHash'.
+     * Sets use page number in url hash.
      *
-     * @param usePageNumberInUrlHash Value to set for property 'usePageNumberInUrlHash'.
+     * @param usePageNumberInUrlHash the use page number in url hash
      */
 
     public void setUsePageNumberInUrlHash(Boolean usePageNumberInUrlHash) {
@@ -1746,9 +1914,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'textSelectionSynchronousCalculation'.
+     * Is text selection synchronous calculation boolean.
      *
-     * @return Value for property 'textSelectionSynchronousCalculation'.
+     * @return the boolean
      */
     @Override
     public Boolean isTextSelectionSynchronousCalculation() {
@@ -1756,9 +1924,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'textSelectionSynchronousCalculation'.
+     * Sets text selection synchronous calculation.
      *
-     * @param textSelectionSynchronousCalculation Value to set for property 'textSelectionSynchronousCalculation'.
+     * @param textSelectionSynchronousCalculation the text selection synchronous calculation
      */
 
     public void setTextSelectionSynchronousCalculation(Boolean textSelectionSynchronousCalculation) {
@@ -1766,9 +1934,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'variableHeightPageSupport'.
+     * Is variable height page support boolean.
      *
-     * @return Value for property 'variableHeightPageSupport'.
+     * @return the boolean
      */
     @Override
     public Boolean isVariableHeightPageSupport() {
@@ -1776,9 +1944,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'variableHeightPageSupport'.
+     * Sets variable height page support.
      *
-     * @param variableHeightPageSupport Value to set for property 'variableHeightPageSupport'.
+     * @param variableHeightPageSupport the variable height page support
      */
 
     public void setVariableHeightPageSupport(Boolean variableHeightPageSupport) {
@@ -1786,9 +1954,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'createMarkup'.
+     * Is create markup boolean.
      *
-     * @return Value for property 'createMarkup'.
+     * @return the boolean
      */
     @Override
     public Boolean isCreateMarkup() {
@@ -1796,9 +1964,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'createMarkup'.
+     * Sets create markup.
      *
-     * @param createMarkup Value to set for property 'createMarkup'.
+     * @param createMarkup the create markup
      */
 
     public void setCreateMarkup(Boolean createMarkup) {
@@ -1806,9 +1974,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'use_pdf'.
+     * Is use pdf boolean.
      *
-     * @return Value for property 'use_pdf'.
+     * @return the boolean
      */
     @Override
     public Boolean isUse_pdf() {
@@ -1816,16 +1984,19 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'use_pdf'.
+     * Sets use pdf.
      *
-     * @param usePdf Value to set for property 'use_pdf'.
+     * @param usePdf the use pdf
      */
+
     public void setUsePdf(Boolean usePdf) {
         this.usePdf = usePdf;
     }
 
     /**
-     * {@inheritDoc}
+     * Gets mode.
+     *
+     * @return the mode
      */
     @Override
     public String getMode() {
@@ -1833,9 +2004,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'mode'.
+     * Sets mode.
      *
-     * @param mode Value to set for property 'mode'.
+     * @param mode the mode
      */
 
     public void setMode(String mode) {
@@ -1843,7 +2014,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets selection container selector.
+     *
+     * @return the selection container selector
      */
     @Override
     public String getSelectionContainerSelector() {
@@ -1851,9 +2024,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'selectionContainerSelector'.
+     * Sets selection container selector.
      *
-     * @param selectionContainerSelector Value to set for property 'selectionContainerSelector'.
+     * @param selectionContainerSelector the selection container selector
      */
 
     public void setSelectionContainerSelector(String selectionContainerSelector) {
@@ -1861,7 +2034,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets graphics container selector.
+     *
+     * @return the graphics container selector
      */
     @Override
     public String getGraphicsContainerSelector() {
@@ -1869,9 +2044,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'graphicsContainerSelector'.
+     * Sets graphics container selector.
      *
-     * @param graphicsContainerSelector Value to set for property 'graphicsContainerSelector'.
+     * @param graphicsContainerSelector the graphics container selector
      */
 
     public void setGraphicsContainerSelector(String graphicsContainerSelector) {
@@ -1879,9 +2054,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'useBrowserCache'.
+     * Is use browser cache boolean.
      *
-     * @return Value for property 'useBrowserCache'.
+     * @return the boolean
      */
     @Override
     public Boolean isUseBrowserCache() {
@@ -1889,9 +2064,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'useBrowserCache'.
+     * Sets use browser cache.
      *
-     * @param useBrowserCache Value to set for property 'useBrowserCache'.
+     * @param useBrowserCache the use browser cache
      */
 
     public void setUseBrowserCache(Boolean useBrowserCache) {
@@ -1899,7 +2074,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets widget id.
+     *
+     * @return the widget id
      */
     @Override
     public String getWidgetId() {
@@ -1907,9 +2084,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'widgetId'.
+     * Sets widget id.
      *
-     * @param widgetId Value to set for property 'widgetId'.
+     * @param widgetId the widget id
      */
 
     public void setWidgetId(String widgetId) {
@@ -1917,9 +2094,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'rightPanelEnabled'.
+     * Is right panel enabled boolean.
      *
-     * @return Value for property 'rightPanelEnabled'.
+     * @return the boolean
      */
     @Override
     public Boolean isRightPanelEnabled() {
@@ -1927,9 +2104,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'rightPanelEnabled'.
+     * Sets right panel enabled.
      *
-     * @param rightPanelEnabled Value to set for property 'rightPanelEnabled'.
+     * @param rightPanelEnabled the right panel enabled
      */
 
     public void setRightPanelEnabled(Boolean rightPanelEnabled) {
@@ -1937,7 +2114,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets max cache size.
+     *
+     * @return the max cache size
      */
     @Override
     public Long getMaxCacheSize() {
@@ -1945,9 +2124,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'maxCacheSize'.
+     * Sets max cache size.
      *
-     * @param maxCacheSize Value to set for property 'maxCacheSize'.
+     * @param maxCacheSize the max cache size
      */
 
     public void setMaxCacheSize(Long maxCacheSize) {
@@ -1955,7 +2134,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets upload path.
+     *
+     * @return the upload path
      */
     @Override
     public String getUploadPath() {
@@ -1963,25 +2144,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * TODO: parametrizar {@inheritDoc}
-     */
-    @Override
-    public String getCachePath() {
-        Path path = Paths.get(getBasePath(), SUBDIRETORIO_CACHE);
-        if (!Files.exists(path)) {
-            try {
-                Files.createDirectory(path);
-            } catch (IOException e) {
-                throw new VisualizadorInfraException(e);
-            }
-        }
-        return path.toString();
-    }
-
-    /**
-     * Setter for property 'uploadPath'.
+     * Sets upload path.
      *
-     * @param uploadPath Value to set for property 'uploadPath'.
+     * @param uploadPath the upload path
      */
 
     public void setUploadPath(String uploadPath) {
@@ -1989,9 +2154,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'undoEnabled'.
+     * Is undo enabled boolean.
      *
-     * @return Value for property 'undoEnabled'.
+     * @return the boolean
      */
     @Override
     public Boolean isUndoEnabled() {
@@ -1999,9 +2164,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'undoEnabled'.
+     * Sets undo enabled.
      *
-     * @param undoEnabled Value to set for property 'undoEnabled'.
+     * @param undoEnabled the undo enabled
      */
 
     public void setUndoEnabled(Boolean undoEnabled) {
@@ -2009,7 +2174,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets jquery file download cookie name.
+     *
+     * @return the jquery file download cookie name
      */
     @Override
     public String getJqueryFileDownloadCookieName() {
@@ -2017,9 +2184,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'jqueryFileDownloadCookieName'.
+     * Sets jquery file download cookie name.
      *
-     * @param jqueryFileDownloadCookieName Value to set for property 'jqueryFileDownloadCookieName'.
+     * @param jqueryFileDownloadCookieName the jquery file download cookie name
      */
 
     public void setJqueryFileDownloadCookieName(String jqueryFileDownloadCookieName) {
@@ -2027,7 +2194,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets watermark font size.
+     *
+     * @return the watermark font size
      */
     @Override
     public Integer getWatermarkFontSize() {
@@ -2035,9 +2204,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'watermarkFontSize'.
+     * Sets watermark font size.
      *
-     * @param watermarkFontSize Value to set for property 'watermarkFontSize'.
+     * @param watermarkFontSize the watermark font size
      */
 
     public void setWatermarkFontSize(Integer watermarkFontSize) {
@@ -2045,7 +2214,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * {@inheritDoc}
+     * Gets watermark position.
+     *
+     * @return the watermark position
      */
     @Override
     public String getWatermarkPosition() {
@@ -2053,15 +2224,20 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'watermarkPosition'.
+     * Sets watermark position.
      *
-     * @param watermarkPosition Value to set for property 'watermarkPosition'.
+     * @param watermarkPosition the watermark position
      */
 
     public void setWatermarkPosition(String watermarkPosition) {
         this.watermarkPosition = watermarkPosition;
     }
 
+    /**
+     * Gets watermark text.
+     *
+     * @return the watermark text
+     */
     @Override
     public String getWatermarkText() {
         return watermarkText;
@@ -2072,14 +2248,15 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
      *
      * @param watermarkText the watermark text
      */
+
     public void setWatermarkText(String watermarkText) {
         this.watermarkText = watermarkText;
     }
 
     /**
-     * Getter for property 'convertWordDocumentsCompletely'.
+     * Is convert word documents completely boolean.
      *
-     * @return Value for property 'convertWordDocumentsCompletely'.
+     * @return the boolean
      */
     @Override
     public Boolean isConvertWordDocumentsCompletely() {
@@ -2087,9 +2264,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Gets file display name
+     * Gets file display name.
      *
-     * @return file display name
+     * @return the file display name
      */
     @Override
     public String getFileDisplayName() {
@@ -2107,9 +2284,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'convertWordDocumentsCompletely'.
+     * Sets convert word documents completely.
      *
-     * @param convertWordDocumentsCompletely Value to set for property 'convertWordDocumentsCompletely'.
+     * @param convertWordDocumentsCompletely the convert word documents completely
      */
 
     public void setConvertWordDocumentsCompletely(Boolean convertWordDocumentsCompletely) {
@@ -2117,9 +2294,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'ignoreDocumentAbsence'.
+     * Is ignore document absence boolean.
      *
-     * @return Value for property 'ignoreDocumentAbsence'.
+     * @return the boolean
      */
     @Override
     public Boolean isIgnoreDocumentAbsence() {
@@ -2127,9 +2304,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'ignoreDocumentAbsence'.
+     * Sets ignore document absence.
      *
-     * @param ignoreDocumentAbsence Value to set for property 'ignoreDocumentAbsence'.
+     * @param ignoreDocumentAbsence the ignore document absence
      */
 
     public void setIgnoreDocumentAbsence(Boolean ignoreDocumentAbsence) {
@@ -2137,9 +2314,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'preloadPagesOnBrowserSide'.
+     * Is preload pages on browser side boolean.
      *
-     * @return Value for property 'preloadPagesOnBrowserSide'.
+     * @return the boolean
      */
     @Override
     public Boolean isPreloadPagesOnBrowserSide() {
@@ -2147,9 +2324,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'preloadPagesOnBrowserSide'.
+     * Sets preload pages on browser side.
      *
-     * @param preloadPagesOnBrowserSide Value to set for property 'preloadPagesOnBrowserSide'.
+     * @param preloadPagesOnBrowserSide the preload pages on browser side
      */
 
     public void setPreloadPagesOnBrowserSide(Boolean preloadPagesOnBrowserSide) {
@@ -2157,9 +2334,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'printWithWatermark'.
+     * Is print with watermark boolean.
      *
-     * @return Value for property 'printWithWatermark'.
+     * @return the boolean
      */
     @Override
     public Boolean isPrintWithWatermark() {
@@ -2167,9 +2344,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'printWithWatermark'.
+     * Sets print with watermark.
      *
-     * @param printWithWatermark Value to set for property 'printWithWatermark'.
+     * @param printWithWatermark the print with watermark
      */
 
     public void setPrintWithWatermark(Boolean printWithWatermark) {
@@ -2177,9 +2354,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'supportPageRotation'.
+     * Is support page rotation boolean.
      *
-     * @return Value for property 'supportPageRotation'.
+     * @return the boolean
      */
     @Override
     public Boolean isSupportPageRotation() {
@@ -2187,9 +2364,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'supportPageRotation'.
+     * Sets support page rotation.
      *
-     * @param supportPageRotation Value to set for property 'supportPageRotation'.
+     * @param supportPageRotation the support page rotation
      */
 
     public void setSupportPageRotation(Boolean supportPageRotation) {
@@ -2197,18 +2374,18 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'storeLogic'.
+     * Gets store logic.
      *
-     * @return Value for property 'storeLogic'.
+     * @return the store logic
      */
     public String getStoreLogic() {
         return storeLogic;
     }
 
     /**
-     * Setter for property 'storeLogic'.
+     * Sets store logic.
      *
-     * @param storeLogic Value to set for property 'storeLogic'.
+     * @param storeLogic the store logic
      */
 
     public void setStoreLogic(String storeLogic) {
@@ -2216,9 +2393,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'printAnnotations'.
+     * Is print annotations boolean.
      *
-     * @return Value for property 'printAnnotations'.
+     * @return the boolean
      */
     @Override
     public Boolean isPrintAnnotations() {
@@ -2226,9 +2403,29 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'printAnnotations'.
+     * Is typewriter import enabled boolean.
      *
-     * @param printAnnotations Value to set for property 'printAnnotations'.
+     * @return the boolean
+     */
+    @Override
+    public Boolean isTypewriterImportEnabled() {
+        return typewriterImportEnabled;
+    }
+
+    /**
+     * Sets typewriter import enabled.
+     *
+     * @param typewriterImportEnabled the typewriter import enabled
+     */
+
+    public void setTypewriterImportEnabled(Boolean typewriterImportEnabled) {
+        this.typewriterImportEnabled = typewriterImportEnabled;
+    }
+
+    /**
+     * Sets print annotations.
+     *
+     * @param printAnnotations the print annotations
      */
 
     public void setPrintAnnotations(Boolean printAnnotations) {
@@ -2236,15 +2433,20 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Gets disable atmosphere.
+     * Is disable atmosphere boolean.
      *
-     * @return the disable atmosphere
+     * @return the boolean
      */
     @Override
     public Boolean isDisableAtmosphere() {
         return disableAtmosphere;
     }
 
+    /**
+     * Is case sensitive boolean.
+     *
+     * @return the boolean
+     */
     @Override
     public Boolean isCaseSensitive() {
         return caseSensitive;
@@ -2260,6 +2462,11 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
         this.caseSensitive = caseSensitive;
     }
 
+    /**
+     * Is search for separate words boolean.
+     *
+     * @return the boolean
+     */
     @Override
     public Boolean isSearchForSeparateWords() {
         return searchForSeparateWords;
@@ -2286,9 +2493,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Getter for property 'localization'.
+     * Gets localization.
      *
-     * @return Value for property 'localization'.
+     * @return the localization
      */
     @Override
     public String getLocalization() {
@@ -2296,9 +2503,9 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
     }
 
     /**
-     * Setter for property 'localization'.
+     * Sets localization.
      *
-     * @param localization Value to set for property 'localization'.
+     * @param localization the localization
      */
 
     public void setLocalization(String localization) {
@@ -2311,7 +2518,7 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
      * @return the default file name
      */
     public String getDefaultFileName() {
-        return defaultFileName;
+        return defaultFileName == null || defaultFileName.isEmpty() || "null".equalsIgnoreCase(defaultFileName) ? null : defaultFileName;
     }
 
     /**
@@ -2319,34 +2526,108 @@ public class ApplicationConfig extends ServiceConfiguration implements Serializa
      *
      * @param defaultFileName the default file name
      */
+
     public void setDefaultFileName(String defaultFileName) {
         this.defaultFileName = defaultFileName;
     }
 
+    /**
+     * Gets custom document css.
+     *
+     * @return the custom document css
+     */
     @Override
-    public String getEncoding() {
-        return encoding;
+    public String getCustomDocumentCss() {
+        return customDocumentCss;
     }
 
-    public void setEncoding(String encoding) {
-        this.encoding = encoding;
+    /**
+     * Sets custom document css.
+     *
+     * @param customDocumentCss the custom document css
+     */
+
+    public void setCustomDocumentCss(String customDocumentCss) {
+        this.customDocumentCss = customDocumentCss;
     }
 
+    /**
+     * Is use virtual scrolling boolean.
+     *
+     * @return the boolean
+     */
     @Override
-    public String getFontsPath() {
-        return fontsPath;
+    public boolean isUseVirtualScrolling() {
+        return useVirtualScrolling == null ? false : useVirtualScrolling;
     }
 
-    public void setFontsPath(String fontsPath) {
-        this.fontsPath = fontsPath;
+    /**
+     * Sets use virtual scrolling.
+     *
+     * @param useVirtualScrolling the use virtual scrolling
+     */
+
+    public void setUseVirtualScrolling(Boolean useVirtualScrolling) {
+        this.useVirtualScrolling = useVirtualScrolling;
     }
 
+    /**
+     * Is show hidden slides boolean.
+     *
+     * @return the boolean
+     */
     @Override
-    public Boolean isPdfPrintMarginsEnabled() {
-        return pdfPrintMarginsEnabled;
+    public Boolean isShowHiddenSlides() {
+        return showHiddenSlides;
     }
 
-    public void setPdfPrintMarginsEnabled(Boolean pdfPrintMarginsEnabled) {
-        this.pdfPrintMarginsEnabled = pdfPrintMarginsEnabled;
+    /**
+     * Sets show hidden slides.
+     *
+     * @param showHiddenSlides the show hidden slides
+     */
+
+    public void setShowHiddenSlides(Boolean showHiddenSlides) {
+        this.showHiddenSlides = showHiddenSlides;
+    }
+
+    /**
+     * Gets image resolution.
+     *
+     * @return the image resolution
+     */
+    @Override
+    public Integer getImageResolution() {
+        return imageResolution;
+    }
+
+    /**
+     * Sets image resolution.
+     *
+     * @param imageResolution the image resolution
+     */
+
+    public void setImageResolution(Integer imageResolution) {
+        this.imageResolution = imageResolution;
+    }
+
+    /**
+     * Gets image web request timeout.
+     *
+     * @return the image web request timeout
+     */
+    @Override
+    public Integer getImageWebRequestTimeout() {
+        return imageWebRequestTimeout;
+    }
+
+    /**
+     * Sets image web request timeout.
+     *
+     * @param imageWebRequestTimeout the image web request timeout
+     */
+
+    public void setImageWebRequestTimeout(Integer imageWebRequestTimeout) {
+        this.imageWebRequestTimeout = imageWebRequestTimeout;
     }
 }

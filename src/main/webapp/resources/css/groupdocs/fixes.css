@@ -1,12 +1,72 @@
-.head_tool_dropdown_export{width: 210px;}
-input[type="file"].import-input{width: 33px;font-size: 18px !important;}
-.grpdx input, .grpdx textarea, .grpdx select, .grpdx .uneditable-input{width: 31px !important;}
-.file-input{font-size:21px !important;}
-.input_search, .grpdx .input_search{width: 65px !important;}
-.loading_overlay_message { position: absolute; top: 30%; left: 50%; margin: -50px 0 0 -105px; width: 230px; }
-.grpdx { font-size: 16px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-.grpdx .modal.fade { top: -300px; }
-.groupdocs_viewer_wrapper { background-color: #777d84; height: 100%; }
-.grpdx .ta_tp_font { margin-left: -6px; width: 75px; font-family: "PT Sans", Helvetica, Arial, sans-serif; font-size: 14px; }
-.grpdx .tool_field_tooltip { width: 200px; }
-.new_head_tools_btn:after { max-width: 250px; }
+li.thumb-page{position:relative}
+.progresspin{z-index:-1}
+.embedded_viewer_wrapper{background:url(images/mainbg.png) repeat scroll 0 0 transparent;bottom:0;display:inline-block;left:0;position:absolute;top:40px;width:100%}
+.doc_viewer{width:100%;height:100%;overflow:auto}
+.thumbs_btn_slide{left:205px}
+.viewer_header{background:none repeat scroll 0 0 #125389;border-bottom:1px solid #073052;display:inline-block;position:relative;width:100%}
+.groupdocs_viewer_wrapper{position:relative;background-color:#125389}
+.page.hard{background:none repeat scroll 0 0 #125389}
+.page{box-shadow:0 0 20px rgba(0,0,0,0.2)}
+div.doc_viewer_flip{height:auto;overflow:visible;position:relative;top:0;padding:0;left:30px;right:30px}
+div.pages_container_flip{overflow:visible}
+div.doc_viewer_wrapper_flip{overflow:hidden}
+.page_image_flip{margin:0}
+.page.hard h1{background:none repeat scroll 0 0 #FFF;margin:100px 0 0 30px;padding:10px}
+.doc-page{padding:0}
+.doc_viewer_wrapper_page_flip{display:inline-block;position:absolute;width:100%;height:100%}
+.page-wrapper{-webkit-perspective:2000px;-moz-perspective:2000px;-ms-perspective:2000px;perspective:2000px}
+.ui-selectable-helper{position:absolute;z-index:1000;border:1px dotted #000}
+.grpdx .page-image,.grpdx .viewer_loading_overlay,.grpdx .highlight-pane,.grpdx .search-pane,.grpdx .html_pages_container .html_page_contents{margin:0}
+.grpdx .pages_container{line-height:0;position:relative}
+.grpdx .pages_container > .doc-page{margin-bottom:15px;margin-left:7px}
+div.thumbnailsContainer,.thumbs_btn{z-index:25}
+.modal-backdrop{z-index:26}
+.grpdx a,.grpdx a:hover{color:inherit}
+.grpdx .thumbnailsContainer .thumb-page{min-height:0}
+div.thumbnailsContainer ul li img.thumb_image{margin:auto;position:absolute;bottom:0;left:0;right:0;top:0}
+div.thumbnailsContainer ul li .html_page_contents img{width:auto}
+div.thumbnailsContainer ul li .thumbnail_wrapper{margin:auto;position:absolute;left:0;right:0;top:0;bottom:0}
+div.thumbnailsContainer ul li .html_page_contents{margin:0;display:inline-block}
+.grpdx div.thumbnailsContainer ul li .mouse_intercept_overlay{width:100%;height:100%;position:absolute;left:0;top:0;background-color:transparent;z-index:2}
+.grpdx .ie div.thumbnailsContainer ul li .thumbnail_wrapper{font-size:12pt}
+.groupdocs_viewer_wrapper{overflow:hidden}
+.modal.fade{top:-350px}
+.new_head_tools_btn:after{line-height:18px;z-index:1000000}
+.grpdx .modal_dialog_wrapper{display:none;z-index:1001}
+.grpdx .modal_dialog_overlay{position:absolute;width:100%;height:100%;background-color:#000;opacity:.5;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);filter:alpha(opacity=50);z-index:1001}
+.grpdx .modal_dialog_content_wrapper{position:absolute;position:absolute;margin:30px auto;z-index:1002;border:1px solid #000;left:50%;top:50%;overflow:auto}
+.grpdx .modal_dialog_header{height:25px;font-size:15px;font-weight:700;border-collapse:collapse;background-color:#ccc;padding:3px 10px}
+.grpdx .modal_dialog_content{background-color:#fff;padding:10px;border:1px solid #000}
+.grpdx .doc-page{overflow:hidden}
+.grpdx .chrome.html_page_contents{width:0;height:0;overflow:visible}
+.grpdx .chrome.html_page_contents > div{background-color:#fff;-webkit-box-shadow:2px 2px 9px #d6d6d6;-moz-box-shadow:2px 2px 9px #d6d6d6;box-shadow:2px 2px 9px #d6d6d6;border:1px solid #ededed}
+.grpdx .html_page_contents{-moz-transform-origin:left 0;-webkit-transform-origin:left 0;-ms-transform-origin:left 0;line-height:normal;background-color:#fff;z-index:1;position:relative}
+.grpdx .html_pages_container .viewer_loading_overlay{z-index:1}
+.grpdx .thumbnail_wrapper{overflow:hidden}
+.grpdx .thumbnail_panel{display:inline-block}
+.grpdx .thumbnail_panel div.thumbnailsContainer{display:block}
+.thumbnailsContainer{display:none}
+.search_highlight_html{background-color:#9c9;fill:#9c9;position:static!important;font-size:inherit!important}
+.grpdx .pages_container .current_search_highlight{fill:lime}
+.grpdx .ie .doc-page .html_page_contents > div{font-size:12em}
+.grpdx .ie .doc-page .html_page_contents > div.text_document_wrapper,.grpdx .ie .doc-page .html_page_contents > div.html_document_wrapper{font-size:16px}
+.grpdx .ie .doc-page .html_page_contents > .pageWordToHtml{font-size:1em}
+.grpdx .ie8 .doc-page{background-color:#fff}
+.page-image{z-index:1;position:relative}
+.grpdx .doc-page.cover_page{display:block}
+.grpdx .doc-page .html_page_contents .slideTitle{display:none}
+.grpdx .doc-page .html_watermark{z-index:1;height:100%;position:absolute;left:0;top:0;width:100%;line-height:1em}
+.grpdx .doc-page .html_document_wrapper{background-color:#fff;position:relative;z-index:1}
+.grpdx .doc-page .text_document_wrapper{display:inline}
+body > div.groupdocsPrintFrame,body > div.groupdocsPrintFrameDeactivated{display:none}
+@media print {
+    *{margin:0!important;padding:0!important}
+    html,body{height:100%!important}
+    body{overflow:visible!important}
+    body *{display:none!important}
+    body div.groupdocsPrintFrame{height:100%}
+    body div.groupdocsPrintFrame,body div.groupdocsPrintFrame img{display:block!important}
+    div.groupdocsPrintFrame img{max-width:100%;max-height:100%;page-break-after:always}
+}
+.h_t_d_printanno { background-position: -591px -1061px !important; }
+.h_t_d_printclear { background-position: -591px -1083px !important; }

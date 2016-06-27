@@ -79,8 +79,8 @@ public class VisualizadorPanel extends EntidadeBasePanel<Binario> {
         renderer.cssHeaderItemForUrl(getCaminhoCss("fixes.css"));
         renderer.cssHeaderItemForUrl(getCaminhoCss("visualizador.css"));
         adicionarAjustesCssInternetExplorer(headerResponse);
-        renderer.javascriptHeaderItemForUrl(getCaminhoJs("atmosphere-min.js"));
-        renderer.javascriptHeaderItemForUrl(getCaminhoJs("GroupDocsAtmosphere.min.js"));
+//        renderer.javascriptHeaderItemForUrl(getCaminhoJs("atmosphere-min.js"));
+//        renderer.javascriptHeaderItemForUrl(getCaminhoJs("GroupDocsAtmosphere.min.js"));
         headerResponse.render(JavaScriptHeaderItem.forScript("configurarContainer();", "parte4"));
     }
 

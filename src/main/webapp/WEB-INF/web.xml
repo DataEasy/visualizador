@@ -107,7 +107,7 @@
 
     <servlet-mapping>
         <servlet-name>default</servlet-name>
-        <url-pattern>/document-annotation/assets/*</url-pattern>
+        <url-pattern>/assets/*</url-pattern>
         <url-pattern>*.js</url-pattern>
         <url-pattern>*.css</url-pattern>
         <url-pattern>*.png</url-pattern>
