@@ -658,7 +658,7 @@
                                 <configuration>
                                     <ignoreMissingDeployment>true</ignoreMissingDeployment>
                                     <type>${project.packaging}</type>
-                                    <match-pattern>${project.artifactId}-*.*</match-pattern>
+                                    <match-pattern>${project.build.finalName}-*.*</match-pattern>
                                     <domain>
                                         <server-groups>
                                             <server-group>${wildfly-server-group}</server-group>
