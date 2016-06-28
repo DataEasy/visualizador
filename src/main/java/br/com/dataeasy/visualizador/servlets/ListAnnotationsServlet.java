@@ -15,7 +15,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "ListAnnotationsServlet", urlPatterns = { "/document-annotation/ListAnnotationsHandler", "/ListAnnotationsHandler" })
+@WebServlet(name = "ListAnnotationsServlet", urlPatterns = { "/ListAnnotationsHandler" })
 public class ListAnnotationsServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override

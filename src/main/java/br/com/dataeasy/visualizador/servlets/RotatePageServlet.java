@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.VisualizadorInfraException;
 import br.com.dataeasy.visualizador.media.MediaType;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author Aleksey Permyakov (18.11.2014)
  */
-@WebServlet(name = "RotatePageServlet", urlPatterns = { "/document-viewer/RotatePageHandler/*" })
+@WebServlet(name = "RotatePageServlet", urlPatterns = { "/RotatePageHandler/*" })
 public class RotatePageServlet extends AnnotationServlet {
 
     private static final long   serialVersionUID = 1L;

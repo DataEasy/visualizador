@@ -15,7 +15,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "SaveTextFieldServlet", urlPatterns = { "/document-annotation/SaveTextFieldHandler", "/SaveTextFieldHandler" })
+@WebServlet(name = "SaveTextFieldServlet", urlPatterns = { "/SaveTextFieldHandler" })
 public class SaveTextFieldServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override

@@ -40,8 +40,6 @@ public class IndexServlet extends AnnotationServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        configurarCaminhoDaApp(request);
-
         Binario binario = new Binario(request.getParameter("caminho"), request.getParameter("mimeType"));
         binario.setToken(request.getParameter("token"));
 

@@ -6,7 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.common.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
@@ -23,13 +25,15 @@ import com.groupdocs.annotation.exception.AnnotationException;
 @SuppressWarnings("serial")
 public abstract class AbstractDoPostCreatedAnnotationServlet extends AbstractDoGetUnsupportedOperationAnnotationServlet {
 
+    private static final Logger LOG = LoggerFactory.getLogger(GetImageUrlsServlet.class);
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
             doPostInternal(request, response);
         } catch (AnnotationException e) {
-            Utils.err(AnnotationServlet.class, e);
+            LOG.error("Exceção AnnotationException", e);
 
         }
         response.setStatus(HttpServletResponse.SC_CREATED);

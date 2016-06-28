@@ -20,7 +20,7 @@ $(function() {
 
 /**
  * Exibir mensagem de erro.
- *
+ * 
  * @param msg
  *            exibe mensagem de erro ao usuário.
  */
@@ -41,7 +41,7 @@ function removerBotoes() {
 
 /**
  * Importação dinâmica de JS ou CSS como em http://www.javascriptkit.com/javatutors/loadjavascriptcss.shtml.
- *
+ * 
  * @param nome
  *            nome do arquivo
  * @param tipo
@@ -94,11 +94,11 @@ function configurarApplicationPath() {
  */
 function configurarContainer() {
     var container = window.Container || new JsInject.Container();
-    container.Register('PathProvider', function (c) {
+    container.Register('PathProvider', function(c) {
         return jSaaspose.utils;
     }, true);
     window.Container = container;
-    window.groupdocsAnnotationFrontEndVersion = function (){
+    window.groupdocsAnnotationFrontEndVersion = function() {
         var gVersion = '1.1.0';
         var gUpDate = '2014.11.19';
         return 'GroupDocs.Annotation front-end v' + gVersion + ' updated by ' + gUpDate;
@@ -107,7 +107,7 @@ function configurarContainer() {
 
 /**
  * Abre widget do visualizador GroupDocs com componente de Annotations. Atualmente só exibe documentos, sem permitir trabalhar com anotações.
- *
+ * 
  * @param info
  *            informações sobre usuário e documento a visualizar.
  */
@@ -120,7 +120,7 @@ function visualizarDocumentoAnotacaoComId(info) {
         fileId : info.fileId,
         docViewerId : 'annotation-widget-doc-viewer',
         quality : 100,
-        enableRightClickMenu : false,
+        enableRightClickMenu : true,
         showHeader : true,
         showZoom : true,
         showPaging : true,
@@ -128,7 +128,7 @@ function visualizarDocumentoAnotacaoComId(info) {
         showFileExplorer : false,
         showThumbnails : true,
         showToolbar : true,
-        openThumbnails : true,
+        openThumbnails : false,
         zoomToFitWidth : info.zoomToFitWidth,
         zoomToFitHeight : info.zoomToFitHeight,
         initialZoom : 100,
@@ -149,11 +149,11 @@ function visualizarDocumentoAnotacaoComId(info) {
         undoEnabled : true,
         anyToolSelection : true,
         tabNavigationEnabled : false,
-        minimumImageWidth : 150,
+        minimumImageWidth : 0,
         areaToolOptions : {
             pen : {
                 width : 1,
-                color : -65536,
+                color : -16711936,
                 dashStyle : 0
             },
             brush : {
@@ -167,7 +167,7 @@ function visualizarDocumentoAnotacaoComId(info) {
                 dashStyle : 0
             },
             brush : {
-                color : -16711936
+                color : -65281
             }
         },
         arrowToolOptions : {

@@ -15,7 +15,7 @@ import com.groupdocs.annotation.exception.AnnotationException;
  * @author imy
  */
 @SuppressWarnings("serial")
-@WebServlet(name = "SetTextFieldColorServlet", urlPatterns = { "/document-annotation/SetTextFieldColorHandler", "/SetTextFieldColorHandler" })
+@WebServlet(name = "SetTextFieldColorServlet", urlPatterns = { "/SetTextFieldColorHandler" })
 public class SetTextFieldColorServlet extends AbstractDoPostComJSONNaExcecaoAnnotationServlet {
 
     @Override

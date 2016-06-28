@@ -17,8 +17,8 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.ArrayUtils;
 
 import br.com.dataeasy.visualizador.negocio.excecoes.VisualizadorNegocioException;
 import br.com.dataeasy.visualizador.util.Constantes;
@@ -84,7 +84,7 @@ public final class Messages {
 
         Properties propriedades = getProperties();
         String valorDaMensagem = ofNullable(propriedades.get(key)).orElse(key).toString();
-        if (ArrayUtils.isNotEmpty(params)) {
+        if (!ArrayUtils.isEmpty(params)) {
             // Tenta traduzir os parametros, se não houver tradução, utiliza o valor real do argumento
             Function<Object, Object> mapper = param -> ofNullable(propriedades.get(param)).orElse(param);
             List<Object> listaParametrosTraduzidos = Arrays.stream(params).map(mapper).collect(toList());
@@ -95,7 +95,7 @@ public final class Messages {
 
     public static String formatar(String mensagem, Object... params) {
         String resultado = mensagem;
-        if (ArrayUtils.isNotEmpty(params) && !StringUtils.isEmpty(mensagem)) {
+        if (!ArrayUtils.isEmpty(params) && !StringUtils.isEmpty(mensagem)) {
             MessageFormat mf = new MessageFormat(mensagem, Constantes.LOCALE_PADRAO);
             resultado = mf.format(params, new StringBuffer(), null).toString();
         }

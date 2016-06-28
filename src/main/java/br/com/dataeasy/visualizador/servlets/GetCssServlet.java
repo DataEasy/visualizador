@@ -8,9 +8,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.groupdocs.annotation.exception.AnnotationException;
-
 import br.com.dataeasy.visualizador.VisualizadorInfraException;
+
+import com.groupdocs.annotation.exception.AnnotationException;
 
 /**
  * @author imy
@@ -18,18 +18,18 @@ import br.com.dataeasy.visualizador.VisualizadorInfraException;
 @WebServlet(name = "GetCssServlet", urlPatterns = { "/GetCssHandler" })
 public class GetCssServlet extends AnnotationServlet {
     private static final long serialVersionUID = 1L;
-    
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setHeader("Content-type", "text/css");
-        
+
         try {
             writeOutput((InputStream) annotationHandler.getCssHandler(request.getParameter("script"), request, response), response);
         } catch (AnnotationException e) {
             throw new VisualizadorInfraException("Problema ao carregar CSS.", e);
         }
     }
-    
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         throw new UnsupportedOperationException();
